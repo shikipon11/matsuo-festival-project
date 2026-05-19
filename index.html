@@ -1,0 +1,89 @@
+<!-- ========================= -->
+<!-- index.html -->
+<!-- ========================= -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- スマホ対応 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS読み込み -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>文化祭企画一覧</title>
+</head>
+  <!-- ========================= -->
+<!-- モーダル -->
+<!-- ========================= -->
+
+<div id="modal" class="modal">
+
+  <!-- モーダル本体 -->
+  <div class="modal-content">
+
+    <!-- 閉じるボタン -->
+    <span id="close-modal" class="close-button">
+      ×
+    </span>
+
+    <!-- タイトル -->
+    <h2 id="modal-title">
+      仮企画
+    </h2>
+
+    <!-- 仮画像エリア -->
+    <div class="modal-image">
+      画像エリア
+    </div>
+
+    <!-- 情報 -->
+    <p id="modal-category"></p>
+    <p id="modal-place"></p>
+
+  </div>
+
+</div>
+<body>
+
+  <!-- ページ全体 -->
+  <div class="container">
+
+    <!-- タイトル -->
+    <h1>文化祭企画一覧</h1>
+
+    <!-- ========================= -->
+    <!-- 大区分切り替えボタン -->
+    <!-- ========================= -->
+    <div class="top-buttons">
+
+      <!-- 番号順ボタン -->
+      <button class="tab-button active" data-tab="number">
+        番号順
+      </button>
+
+      <!-- カテゴリ順ボタン -->
+      <button class="tab-button" data-tab="category">
+        カテゴリ順
+      </button>
+
+      <!-- 場所順ボタン -->
+      <button class="tab-button" data-tab="place">
+        場所順
+      </button>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- 表示エリア -->
+    <!-- ========================= -->
+    <div id="content-area"></div>
+
+  </div>
+
+  <!-- JavaScript読み込み -->
+  <script src="script.js"></script>
+
+</body>
+</html>
