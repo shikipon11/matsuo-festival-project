@@ -65,6 +65,10 @@ const contentArea = document.getElementById("content-area");
 // タブボタン取得
 const tabButtons = document.querySelectorAll(".tab-button");
 
+const modalCategoryIcon =
+  document.getElementById(
+    "modal-category-icon"
+  );
 // 最初は番号順表示
 renderNumberView();
 
@@ -279,7 +283,13 @@ card.addEventListener("click", () => {
   // 場所
   modalPlace.textContent =
     `場所：${project.place}`;
-
+  // カテゴリアイコン表示
+modalCategoryIcon.innerHTML = `
+  <img
+    src="icons/${project.category}.png"
+    alt="${project.category}"
+  >
+`;
   // モーダル表示
   modal.classList.add("show");
 
