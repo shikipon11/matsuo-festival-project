@@ -6,8 +6,12 @@
 body {
   margin: 0;
   padding: 20px;
-  background-color: #f5f5f5;
-  font-family: sans-serif;
+
+  background-color: #f4f8f8;
+
+  font-family:
+    "Zen Kaku Gothic New",
+    sans-serif;
 }
 
 /* ページ全体 */
@@ -51,7 +55,7 @@ h1 {
 
 /* 選択中 */
 .tab-button.active {
-  background-color: #333333;
+  background-color: #2a83a2;
   color: white;
 }
 
@@ -148,26 +152,29 @@ h1 {
   font-size: 14px;
 }
 
-/* カテゴリ色 */
+/* 飲食 */
 .food {
-  background-color: orange;
+  background-color: #d75c37;
 }
 
+/* 体験 */
 .experience {
-  background-color: dodgerblue;
+  background-color: #2a83a2;
 }
 
+/* 展示 */
 .exhibition {
-  background-color: seagreen;
+  background-color: #c8a44d;
 }
 
+/* パフォーマンス */
 .performance {
-  background-color: purple;
+  background-color: #7b5ea7;
 }
 
-/* 場所色 */
+/* 場所 */
 .place {
-  background-color: dimgray;
+  background-color: #555555;
 }
 /* ========================= */
 /* モーダル */
@@ -258,3 +265,48 @@ h1 {
 
   color: gray;
 }
+/* ========================= */
+/* モーダルヘッダー */
+/* ========================= */
+
+.modal-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+/* タイトル */
+#modal-title {
+  margin: 0;
+}
+
+/* カテゴリアイコン */
+#modal-category-icon {
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 15px;
+
+  background-color: #eeeeee;
+
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* アイコン画像 */
+#modal-category-icon img {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
