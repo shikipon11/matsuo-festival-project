@@ -87,21 +87,23 @@ body {
   transition: 0.2s;
 }
 /* ========================= */
-/* ドロップダウン */
+/* スケジュールメニュー */
 /* ========================= */
 
-.dropdown {
+.schedule-menu {
 
   position: relative;
 }
 
 /* ボタン */
-.dropdown-button {
+#schedule-toggle {
 
   background: none;
+
   border: none;
 
   font-size: 16px;
+
   font-weight: bold;
 
   color: #333333;
@@ -113,8 +115,8 @@ body {
     sans-serif;
 }
 
-/* メニュー */
-.dropdown-menu {
+/* ドロップダウン */
+#schedule-dropdown {
 
   display: none;
 
@@ -137,8 +139,14 @@ body {
   z-index: 999;
 }
 
-/* 中のリンク */
-.dropdown-menu a {
+/* 開いた状態 */
+#schedule-dropdown.open {
+
+  display: block;
+}
+
+/* リンク */
+#schedule-dropdown a {
 
   display: block;
 
@@ -147,30 +155,15 @@ body {
   text-decoration: none;
 
   color: #333333;
-
-  font-weight: normal;
 }
 
 /* ホバー */
-.dropdown-menu a:hover {
+#schedule-dropdown a:hover {
 
   background-color: #f3f3f3;
 
   color: #d75c37;
-}
-
-/* ホバーで表示 */
-.dropdown:hover .dropdown-menu {
-
-  display: block;
-}
-/* ホバー */
-.header-nav a:hover {
-
-  color: #d75c37;
-}
-
-/* ========================= */
+}/* ========================= */
 /* ヒーロー */
 /* ========================= */
 
