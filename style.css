@@ -15,6 +15,125 @@ body {
 }
 
 /* ページ全体 */
+/* ========================= */
+/* ヘッダー */
+/* ========================= */
+
+.site-header {
+
+  height: 80px;
+
+  background-color: white;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 左側 */
+.header-left {
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+/* ロゴ */
+.header-logo {
+
+  width: 50px;
+  height: 50px;
+
+  object-fit: contain;
+}
+
+/* タイトル */
+.header-title {
+
+  font-size: 28px;
+  
+}
+
+/* メニュー */
+.header-nav {
+
+  display: flex;
+
+  gap: 30px;
+}
+
+/* メニューリンク */
+.header-nav a {
+
+  text-decoration: none;
+
+  color: #333333;
+
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+/* ホバー */
+.header-nav a:hover {
+
+  color: #d75c37;
+}
+
+/* ========================= */
+/* ヒーロー */
+/* ========================= */
+
+.hero {
+
+  width: 100%;
+  height: 350px;
+
+  background-color: #d9d9d9;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* オーバーレイ */
+.hero-overlay {
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.35);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* タイトル */
+.hero-title {
+
+  color: white;
+
+  font-size: 72px;
+
+  margin: 0;
+
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
 .container {
   max-width: 900px;
   margin: auto;
