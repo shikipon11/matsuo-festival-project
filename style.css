@@ -600,7 +600,15 @@ h1 {
 
   font-size: 20px;
 
-  color: black;
+  color: #333333;
+
+  background-color: #eeeeee;
+
+  padding: 6px 12px;
+
+  border-radius: 10px;
+
+  font-weight: bold;
 }
 
 /* タイトル */
