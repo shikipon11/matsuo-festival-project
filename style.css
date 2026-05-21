@@ -642,28 +642,46 @@ h1 {
   #menu-button {
 
     display: block;
+    position: relative;
+    z-index: 1000;
   }
 
-  /* ナビ */
-  .header-nav {
+.header-nav {
 
-    display: none;
+  position: fixed;
 
-    width: 100%;
+  top: 0;
 
-    flex-direction: column;
+  left: -260px;
 
-    gap: 15px;
+  width: 240px;
 
-    margin-top: 15px;
-  }
+  height: 100vh;
 
-  /* 開いた */
-  .header-nav.open {
+  background-color: white;
 
-    display: flex;
-  }
+  display: flex;
 
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding: 100px 20px 20px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    2px 0 10px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
+
+  z-index: 999;
+}
+
+.header-nav.open {
+
+  left: 0;
+}
   /* タイトル */
   .header-title {
 
