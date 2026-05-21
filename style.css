@@ -598,19 +598,22 @@ h1 {
 /* 番号 */
 #modal-number {
 
-  font-size: 20px;
+  min-width: 40px;
 
-  color: white;
+  height: 40px;
 
-  background-color: black;
+  display: flex;
 
-  padding: 6px 12px;
+  justify-content: center;
 
-  border-radius: 10px;
+  align-items: center;
+
+  background-color: #f3f3f3;
+
+  border-radius: 12px;
 
   font-weight: bold;
 }
-
 /* タイトル */
 #modal-title {
 
