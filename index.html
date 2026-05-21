@@ -1,191 +1,274 @@
 <!-- ========================= -->
 <!-- index.html -->
 <!-- ========================= -->
+
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
   <meta charset="UTF-8">
-  <!-- Zenkaku Gothic -->
-<link
-  rel="preconnect"
-  href="https://fonts.googleapis.com"
->
 
-<link
-  rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin
->
-
-<link
-  href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
-  rel="stylesheet"
->
   <!-- スマホ対応 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <!-- CSS読み込み -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
-  <title>文化祭企画一覧</title>
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <title>
+    文化祭企画一覧
+  </title>
+
 </head>
+
 <body>
+
   <!-- ========================= -->
-<!-- モーダル -->
-<!-- ========================= -->
+  <!-- モーダル -->
+  <!-- ========================= -->
 
-<div id="modal" class="modal">
+  <div id="modal" class="modal">
 
-  <!-- モーダル本体 -->
-  <div class="modal-content">
+    <!-- モーダル本体 -->
+    <div class="modal-content">
 
-    <!-- 閉じるボタン -->
-    <span id="close-modal" class="close-button">
-      ×
-    </span>
+      <!-- 閉じる -->
+      <span
+        id="close-modal"
+        class="close-button"
+      >
+        ×
+      </span>
 
-    <!-- タイトル行 -->
-    <div class="modal-header">
+      <!-- モーダルヘッダー -->
+      <div class="modal-header">
 
-      <!-- カテゴリアイコン -->
-      <div id="modal-category-icon">
+        <!-- カテゴリアイコン -->
+        <div id="modal-category-icon">
+        </div>
+
+        <!-- タイトル -->
+        <h2 id="modal-title">
+          仮企画
+        </h2>
 
       </div>
 
+      <!-- 画像 -->
+      <div class="modal-image">
+
+        画像エリア
+
+      </div>
+
+      <!-- 情報 -->
+      <p id="modal-category"></p>
+
+      <p id="modal-place"></p>
+
+    </div>
+
+  </div>
+
+  <!-- ========================= -->
+  <!-- ヘッダー -->
+  <!-- ========================= -->
+
+  <header class="site-header">
+
+    <!-- 左側 -->
+    <div class="header-left">
+
+      <!-- ロゴ -->
+      <img
+        src="images/logo.png"
+        alt="ロゴ"
+        class="header-logo"
+      >
+
       <!-- タイトル -->
-      <h2 id="modal-title">
-        仮企画
-      </h2>
+      <div class="header-title">
+
+        第69回松尾祭
+
+      </div>
 
     </div>
 
-    <!-- 仮画像エリア -->
-    <div class="modal-image">
-      画像エリア
-    </div>
+    <!-- ハンバーガー -->
+    <button id="menu-button">
 
-    <!-- 情報 -->
-    <p id="modal-category"></p>
-    <p id="modal-place"></p>
+      ☰
 
-  </div>
-
-</div>
-<!-- ========================= -->
-<!-- ヘッダー -->
-<!-- ========================= -->
-
-<header class="site-header">
-
-  <!-- 左側 -->
-  <div class="header-left">
-
-    <!-- ロゴ画像 -->
-    <img
-      src="images/logo.png"
-      alt="ロゴ"
-      class="header-logo"
-    >
-
-    <!-- タイトル -->
-    <div class="header-title">
-      第69回松尾祭
-    </div>
-
-  </div>
-
- <nav class="header-nav">
-
-  <a href="index.html">
-    ホーム
-  </a>
-
-  <a href="food.html">
-    飲食
-  </a>
-
-  <a href="goods.html">
-    グッズ
-  </a>
-   
-  <a href="contact.html">
-    お問合せ
-  </a>
-
-  <a href="map.html">
-    MAP
-  </a>
-
-     <!-- ▼ スケジュール dropdown -->
-  <div class="dropdown">
-
-    <button
-  id="schedule-toggle"
-  class="dropdown-button"
->
-      スケジュール
     </button>
 
-       <!-- 開閉メニュー -->
-    <div id="schedule-dropdown">
+    <!-- メニュー -->
+    <nav
+      class="header-nav"
+      id="header-nav"
+    >
 
-      <a href="student-schedule.html">
-        生徒の方はこちら
+      <!-- ホーム -->
+      <a href="index.html">
+
+        ホーム
+
       </a>
 
-      <a href="visitor-schedule.html">
-        一般の方はこちら
+      <!-- 飲食 -->
+      <a href="food.html">
+
+        飲食
+
       </a>
+
+      <!-- グッズ -->
+      <a href="goods.html">
+
+        グッズ
+
+      </a>
+
+     
+      <!-- お問合せ -->
+      <a href="contact.html">
+
+        お問合せ
+
+      </a>
+
+      <!-- MAP -->
+      <a href="map.html">
+
+        MAP
+
+      </a>
+ <!-- スケジュール -->
+      <div class="dropdown">
+
+        <!-- ボタン -->
+        <button
+          id="schedule-toggle"
+          class="dropdown-button"
+        >
+
+          スケジュール ▼
+
+        </button>
+
+        <!-- 開閉メニュー -->
+        <div id="schedule-dropdown">
+
+          <a href="student-schedule.html">
+
+            生徒の方はこちら
+
+          </a>
+
+          <a href="visitor-schedule.html">
+
+            一般の方はこちら
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <!-- ========================= -->
+  <!-- ヒーロー -->
+  <!-- ========================= -->
+
+  <section class="hero">
+
+    <!-- オーバーレイ -->
+    <div class="hero-overlay">
+
+      <!-- タイトル -->
+      <h1 class="hero-title">
+
+        企画一覧
+
+      </h1>
 
     </div>
 
-  </div>
-</nav>
+  </section>
 
-</header>
-
-<!-- ========================= -->
-<!-- ヒーロー -->
-<!-- ========================= -->
-
-<section class="hero">
-
-  <!-- オーバーレイ -->
-  <div class="hero-overlay">
-
-    <!-- 見出し -->
-    <h1 class="hero-title">
-      企画一覧
-    </h1>
-
-  </div>
-
-</section>
-
+  <!-- ========================= -->
   <!-- ページ全体 -->
+  <!-- ========================= -->
+
   <div class="container">
 
-    <!-- タイトル -->
-    <h1>文化祭企画一覧</h1>
+    <!-- ページタイトル -->
+    <h1>
+
+      文化祭企画一覧
+
+    </h1>
 
     <!-- ========================= -->
-    <!-- 大区分切り替えボタン -->
+    <!-- 切り替えボタン -->
     <!-- ========================= -->
+
     <div class="top-buttons">
 
-      <!-- 番号順ボタン -->
-      <button class="tab-button active" data-tab="number">
+      <!-- 番号順 -->
+      <button
+        class="tab-button active"
+        data-tab="number"
+      >
+
         番号順
+
       </button>
 
-      <!-- カテゴリ順ボタン -->
-      <button class="tab-button" data-tab="category">
+      <!-- カテゴリ順 -->
+      <button
+        class="tab-button"
+        data-tab="category"
+      >
+
         カテゴリ順
+
       </button>
 
-      <!-- 場所順ボタン -->
-      <button class="tab-button" data-tab="place">
+      <!-- 場所順 -->
+      <button
+        class="tab-button"
+        data-tab="place"
+      >
+
         場所順
+
       </button>
 
     </div>
@@ -193,12 +276,14 @@
     <!-- ========================= -->
     <!-- 表示エリア -->
     <!-- ========================= -->
+
     <div id="content-area"></div>
 
   </div>
 
-  <!-- JavaScript読み込み -->
+  <!-- JavaScript -->
   <script src="script.js"></script>
 
 </body>
+
 </html>
