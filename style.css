@@ -608,11 +608,17 @@ h1 {
 
   align-items: center;
 
-  background-color: #f3f3f3;
+  border: 2px solid black;
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   font-weight: bold;
+
+  font-size: 14px;
+
+  color: black;
+
+  box-sizing: border-box;
 }
 /* タイトル */
 #modal-title {
