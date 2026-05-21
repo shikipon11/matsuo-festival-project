@@ -25,43 +25,31 @@ const projects = [
 // =========================
 
 const contentArea =
-  document.getElementById(
-    "content-area"
-  );
+  document.getElementById("content-area");
 
 const tabButtons =
-  document.querySelectorAll(
-    ".tab-button"
-  );
+  document.querySelectorAll(".tab-button");
 
 const modal =
-  document.getElementById(
-    "modal"
-  );
+  document.getElementById("modal");
 
 const closeModal =
-  document.getElementById(
-    "close-modal"
-  );
+  document.getElementById("close-modal");
 
 const modalTitle =
-  document.getElementById(
-    "modal-title"
-  );
-
-const modalCategory =
-  document.getElementById(
-    "modal-category"
-  );
+  document.getElementById("modal-title");
 
 const modalPlace =
+  document.getElementById("modal-place");
+
+const modalNumber =
   document.getElementById(
-    "modal-place"
+    "modal-number"
   );
 
-const modalCategoryIcon =
+const modalCategoryTag =
   document.getElementById(
-    "modal-category-icon"
+    "modal-category-tag"
   );
 
 // =========================
@@ -69,14 +57,10 @@ const modalCategoryIcon =
 // =========================
 
 const menuButton =
-  document.getElementById(
-    "menu-button"
-  );
+  document.getElementById("menu-button");
 
 const headerNav =
-  document.getElementById(
-    "header-nav"
-  );
+  document.getElementById("header-nav");
 
 /* 開閉 */
 menuButton.addEventListener(
@@ -86,7 +70,7 @@ menuButton.addEventListener(
     /* 外側クリック防止 */
     event.stopPropagation();
 
-    /* メニュー開閉 */
+    /* 開閉 */
     headerNav.classList.toggle(
       "open"
     );
@@ -94,18 +78,21 @@ menuButton.addEventListener(
   }
 );
 
-/* 外側クリックで閉じる */
+// =========================
+// 外側クリックで閉じる
+// =========================
+
 document.addEventListener(
   "click",
   event => {
 
-    /* メニュー内判定 */
+    /* メニュー内 */
     const isNav =
       headerNav.contains(
         event.target
       );
 
-    /* ボタン判定 */
+    /* ボタン */
     const isButton =
       menuButton.contains(
         event.target
@@ -148,7 +135,7 @@ scheduleToggle.addEventListener(
     /* 外側クリック防止 */
     event.stopPropagation();
 
-    /* ドロップダウン開閉 */
+    /* 開閉 */
     scheduleDropdown.classList.toggle(
       "open"
     );
@@ -156,18 +143,21 @@ scheduleToggle.addEventListener(
   }
 );
 
-/* 外側クリックで閉じる */
+// =========================
+// 外側クリックで閉じる
+// =========================
+
 document.addEventListener(
   "click",
   event => {
 
-    /* ドロップダウン内判定 */
+    /* ドロップダウン内 */
     const isDropdown =
       scheduleDropdown.contains(
         event.target
       );
 
-    /* ボタン判定 */
+    /* ボタン */
     const isButton =
       scheduleToggle.contains(
         event.target
@@ -207,18 +197,14 @@ tabButtons.forEach(button => {
       /* active削除 */
       tabButtons.forEach(btn => {
 
-        btn.classList.remove(
-          "active"
-        );
+        btn.classList.remove("active");
 
       });
 
       /* active追加 */
-      button.classList.add(
-        "active"
-      );
+      button.classList.add("active");
 
-      /* タブ取得 */
+      /* データ取得 */
       const tab =
         button.dataset.tab;
 
@@ -247,7 +233,7 @@ tabButtons.forEach(button => {
 });
 
 // =========================
-// 番号順表示
+// 番号順
 // =========================
 
 function renderNumberView() {
@@ -271,7 +257,7 @@ function renderNumberView() {
 }
 
 // =========================
-// カテゴリ順表示
+// カテゴリ順
 // =========================
 
 function renderCategoryView() {
@@ -302,16 +288,14 @@ function renderCategoryView() {
   createSection(
     "パフォーマンス",
     projects.filter(
-      p =>
-        p.category ===
-        "パフォーマンス"
+      p => p.category === "パフォーマンス"
     )
   );
 
 }
 
 // =========================
-// 場所順表示
+// 場所順
 // =========================
 
 function renderPlaceView() {
@@ -352,49 +336,32 @@ function renderPlaceView() {
 // セクション生成
 // =========================
 
-function createSection(
-  title,
-  data
-) {
+function createSection(title, data) {
 
-  // =========================
-  // section
-  // =========================
-
+  /* section */
   const section =
-    document.createElement(
-      "div"
-    );
+    document.createElement("div");
 
   section.className =
     "section";
 
-  // =========================
-  // header
-  // =========================
-
+  /* header */
   const header =
-    document.createElement(
-      "div"
-    );
+    document.createElement("div");
 
   header.className =
     "section-header";
 
   /* タイトル */
   const titleElement =
-    document.createElement(
-      "span"
-    );
+    document.createElement("span");
 
   titleElement.textContent =
     title;
 
-  /* 開閉アイコン */
+  /* アイコン */
   const icon =
-    document.createElement(
-      "span"
-    );
+    document.createElement("span");
 
   icon.className =
     "toggle-icon";
@@ -402,22 +369,13 @@ function createSection(
   icon.textContent = "▶";
 
   /* header追加 */
-  header.appendChild(
-    titleElement
-  );
+  header.appendChild(titleElement);
 
-  header.appendChild(
-    icon
-  );
+  header.appendChild(icon);
 
-  // =========================
-  // 一覧
-  // =========================
-
+  /* 一覧 */
   const list =
-    document.createElement(
-      "div"
-    );
+    document.createElement("div");
 
   list.className =
     "project-list";
@@ -430,17 +388,12 @@ function createSection(
 
     /* カード */
     const card =
-      document.createElement(
-        "div"
-      );
+      document.createElement("div");
 
     card.className =
       "project-card";
 
-    // =========================
-    // カテゴリ色
-    // =========================
-
+    /* 色 */
     let categoryClass = "";
 
     if (
@@ -455,8 +408,7 @@ function createSection(
       project.category === "展示"
     ) {
 
-      categoryClass =
-        "exhibition";
+      categoryClass = "exhibition";
 
     }
 
@@ -464,8 +416,7 @@ function createSection(
       project.category === "体験"
     ) {
 
-      categoryClass =
-        "experience";
+      categoryClass = "experience";
 
     }
 
@@ -479,10 +430,7 @@ function createSection(
 
     }
 
-    // =========================
-    // カード中身
-    // =========================
-
+    /* 中身 */
     card.innerHTML = `
 
       <div class="project-number">
@@ -508,33 +456,32 @@ function createSection(
     `;
 
     // =========================
-    // モーダル表示
+    // モーダル
     // =========================
 
     card.addEventListener(
       "click",
       () => {
 
+        /* 番号 */
+        modalNumber.textContent =
+          `企画 ${project.number}`;
+
         /* タイトル */
         modalTitle.textContent =
           `仮企画 ${project.number}`;
 
         /* カテゴリ */
-        modalCategory.textContent =
-          `カテゴリ：${project.category}`;
+        modalCategoryTag.textContent =
+          project.category;
+
+        /* 色 */
+        modalCategoryTag.className =
+          `tag ${categoryClass}`;
 
         /* 場所 */
         modalPlace.textContent =
           `場所：${project.place}`;
-
-        /* アイコン */
-        modalCategoryIcon.innerHTML =
-          `
-          <img
-            src="icons/${project.category}.png"
-            alt="${project.category}"
-          >
-          `;
 
         /* 表示 */
         modal.classList.add(
@@ -550,7 +497,7 @@ function createSection(
   });
 
   // =========================
-  // セクション開閉
+  // 開閉
   // =========================
 
   header.addEventListener(
@@ -578,21 +525,13 @@ function createSection(
     }
   );
 
-  // =========================
-  // section追加
-  // =========================
+  /* section追加 */
+  section.appendChild(header);
 
-  section.appendChild(
-    header
-  );
+  section.appendChild(list);
 
-  section.appendChild(
-    list
-  );
-
-  contentArea.appendChild(
-    section
-  );
+  /* 表示 */
+  contentArea.appendChild(section);
 
 }
 
@@ -617,9 +556,23 @@ modal.addEventListener(
   "click",
   event => {
 
-    if (
-      event.target === modal
-    ) {
+    if (event.target === modal) {
+
+      modal.classList.remove(
+        "show"
+      );
+
+    }
+
+  }
+);
+
+/* ESCキー */
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (event.key === "Escape") {
 
       modal.classList.remove(
         "show"
