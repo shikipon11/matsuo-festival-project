@@ -100,7 +100,37 @@ scheduleToggle.addEventListener(
 // =========================
 
 renderNumberView();
+// =========================
+// 外側クリックで閉じる
+// =========================
 
+document.addEventListener(
+  "click",
+  event => {
+
+    const isDropdown =
+      scheduleDropdown.contains(
+        event.target
+      );
+
+    const isButton =
+      scheduleToggle.contains(
+        event.target
+      );
+
+    if (
+      !isDropdown &&
+      !isButton
+    ) {
+
+      scheduleDropdown.classList.remove(
+        "open"
+      );
+
+    }
+
+  }
+);
 // =========================
 // タブ切り替え
 // =========================
