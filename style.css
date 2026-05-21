@@ -1,14 +1,13 @@
-# 修正版CSS（スマホでも形が崩れにくい版）
-
-```css
 /* ========================= */
 /* style.css */
 /* ========================= */
 
 /* 全体設定 */
 body {
+
   margin: 0;
-  padding: 0;
+
+  padding: 20px;
 
   background-color: #f4f8f8;
 
@@ -17,29 +16,20 @@ body {
     sans-serif;
 }
 
-/* ページ全体 */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
 /* ========================= */
 /* ヘッダー */
 /* ========================= */
 
 .site-header {
 
-  width: 100%;
-  min-height: 80px;
+  height: 80px;
 
   background-color: white;
 
   display: flex;
 
   justify-content: space-between;
+
   align-items: center;
 
   padding: 0 30px;
@@ -47,41 +37,39 @@ body {
   box-sizing: border-box;
 
   position: sticky;
+
   top: 0;
 
   z-index: 100;
 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow:
+    0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* 左側 */
 .header-left {
 
   display: flex;
+
   align-items: center;
 
   gap: 15px;
-
-  min-width: 0;
 }
 
 /* ロゴ */
 .header-logo {
 
   width: 50px;
+
   height: 50px;
 
   object-fit: contain;
-
-  flex-shrink: 0;
 }
 
 /* タイトル */
 .header-title {
 
-  font-size: clamp(20px, 2vw, 28px);
-
-  white-space: nowrap;
+  font-size: 28px;
 }
 
 /* メニュー */
@@ -89,11 +77,9 @@ body {
 
   display: flex;
 
+  align-items: center;
+
   gap: 30px;
-
-  flex-wrap: wrap;
-
-  justify-content: flex-end;
 }
 
 /* メニューリンク */
@@ -106,21 +92,43 @@ body {
   font-weight: bold;
 
   transition: 0.2s;
+}
 
-  white-space: nowrap;
+/* ホバー */
+.header-nav a:hover {
+
+  color: #d75c37;
 }
 
 /* ========================= */
-/* スケジュールメニュー */
+/* ハンバーガー */
 /* ========================= */
 
-.schedule-menu {
+/* ボタン */
+#menu-button {
+
+  display: none;
+
+  background: none;
+
+  border: none;
+
+  font-size: 32px;
+
+  cursor: pointer;
+}
+
+/* ========================= */
+/* スケジュール */
+/* ========================= */
+
+.dropdown {
 
   position: relative;
 }
 
 /* ボタン */
-#schedule-toggle {
+.dropdown-button {
 
   background: none;
 
@@ -147,18 +155,19 @@ body {
   position: absolute;
 
   top: 40px;
+
   left: 0;
 
   background-color: white;
 
   border-radius: 10px;
 
-  box-shadow:
-    0 4px 10px rgba(0,0,0,0.15);
-
   overflow: hidden;
 
   min-width: 220px;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.15);
 
   z-index: 999;
 }
@@ -169,7 +178,7 @@ body {
   display: block;
 }
 
-/* リンク */
+/* 中のリンク */
 #schedule-dropdown a {
 
   display: block;
@@ -196,7 +205,8 @@ body {
 .hero {
 
   width: 100%;
-  height: clamp(220px, 40vw, 350px);
+
+  height: 350px;
 
   background-color: #d9d9d9;
 
@@ -209,13 +219,16 @@ body {
 .hero-overlay {
 
   width: 100%;
+
   height: 100%;
 
-  background-color: rgba(0,0,0,0.35);
+  background-color:
+    rgba(0,0,0,0.35);
 
   display: flex;
 
   justify-content: center;
+
   align-items: center;
 }
 
@@ -224,20 +237,30 @@ body {
 
   color: white;
 
-  font-size: clamp(36px, 8vw, 72px);
+  font-size: 72px;
 
   margin: 0;
 
-  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  text-shadow:
+    0 4px 10px rgba(0,0,0,0.5);
+}
 
-  text-align: center;
+/* ========================= */
+/* コンテナ */
+/* ========================= */
 
-  padding: 0 10px;
+.container {
+
+  max-width: 900px;
+
+  margin: auto;
 }
 
 /* タイトル */
 h1 {
+
   text-align: center;
+
   margin-bottom: 30px;
 }
 
@@ -246,33 +269,45 @@ h1 {
 /* ========================= */
 
 .top-buttons {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
 
-  flex-wrap: wrap;
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
 }
 
-/* ボタン共通 */
+/* ボタン */
 .tab-button {
-  flex: 1 1 200px;
+
+  flex: 1;
+
   padding: 15px;
+
   border: none;
+
   border-radius: 10px;
+
   background-color: white;
+
   font-size: 16px;
+
   cursor: pointer;
+
   transition: 0.2s;
 }
 
-/* ホバー時 */
+/* ホバー */
 .tab-button:hover {
+
   background-color: #dddddd;
 }
 
 /* 選択中 */
 .tab-button.active {
+
   background-color: #2a83a2;
+
   color: white;
 }
 
@@ -281,50 +316,66 @@ h1 {
 /* ========================= */
 
 .section {
+
   margin-bottom: 15px;
+
   background-color: white;
+
   border-radius: 12px;
+
   overflow: hidden;
 }
 
-/* 小区分ヘッダー */
+/* ヘッダー */
 .section-header {
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
 
   padding: 15px 20px;
 
   cursor: pointer;
+
   font-size: 18px;
+
   font-weight: bold;
 }
 
-/* 開閉ボタン */
+/* アイコン */
 .toggle-icon {
+
   font-size: 20px;
 }
 
 /* ========================= */
-/* 企画一覧 */
+/* 一覧 */
 /* ========================= */
 
 .project-list {
+
   display: none;
+
   padding: 15px;
-  border-top: 1px solid #dddddd;
+
+  border-top:
+    1px solid #dddddd;
 }
 
-/* 表示時 */
+/* 開いた */
 .project-list.open {
+
   display: block;
 }
 
 /* ========================= */
-/* 企画カード */
+/* カード */
 /* ========================= */
 
 .project-card {
+
   background-color: #fafafa;
 
   border-radius: 10px;
@@ -338,59 +389,77 @@ h1 {
 
 /* ホバー */
 .project-card:hover {
+
   transform: translateY(-2px);
+
   background-color: #eeeeee;
 }
 
-/* 企画番号 */
+/* 番号 */
 .project-number {
+
   font-size: 14px;
+
   color: gray;
 }
 
-/* 企画タイトル */
+/* タイトル */
 .project-title {
-  font-size: clamp(18px, 3vw, 20px);
+
+  font-size: 20px;
+
   margin: 5px 0;
 }
 
 /* タグ */
 .project-tags {
+
   display: flex;
+
   gap: 10px;
+
   flex-wrap: wrap;
 }
 
 /* タグ共通 */
 .tag {
+
   padding: 5px 10px;
+
   border-radius: 20px;
+
   color: white;
+
   font-size: 14px;
 }
 
 /* 飲食 */
 .food {
+
   background-color: #d75c37;
 }
 
 /* 体験 */
 .experience {
+
   background-color: #2a83a2;
 }
 
 /* 展示 */
 .exhibition {
+
   background-color: #c8a44d;
 }
 
 /* パフォーマンス */
 .performance {
+
   background-color: #7b5ea7;
 }
 
 /* 場所 */
 .place {
+
   background-color: #555555;
 }
 
@@ -398,33 +467,44 @@ h1 {
 /* モーダル */
 /* ========================= */
 
+/* 背景 */
 .modal {
+
   display: none;
 
   position: fixed;
 
   top: 0;
+
   left: 0;
 
   width: 100%;
+
   height: 100%;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color:
+    rgba(0,0,0,0.5);
 
   justify-content: center;
+
   align-items: center;
 
   z-index: 1000;
 }
 
+/* 表示 */
 .modal.show {
+
   display: flex;
 }
 
+/* 本体 */
 .modal-content {
+
   background-color: white;
 
-  width: calc(100% - 30px);
+  width: 90%;
+
   max-width: 500px;
 
   border-radius: 20px;
@@ -433,29 +513,36 @@ h1 {
 
   position: relative;
 
-  box-sizing: border-box;
-
-  animation: popup 0.2s ease;
+  animation:
+    popup 0.2s ease;
 }
 
+/* アニメーション */
 @keyframes popup {
 
   from {
+
     transform: scale(0.8);
+
     opacity: 0;
   }
 
   to {
+
     transform: scale(1);
+
     opacity: 1;
   }
 
 }
 
+/* 閉じる */
 .close-button {
+
   position: absolute;
 
   top: 15px;
+
   right: 20px;
 
   font-size: 30px;
@@ -463,8 +550,11 @@ h1 {
   cursor: pointer;
 }
 
+/* 画像 */
 .modal-image {
+
   width: 100%;
+
   height: 200px;
 
   background-color: #dddddd;
@@ -472,7 +562,9 @@ h1 {
   border-radius: 15px;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
   margin: 20px 0;
@@ -480,11 +572,9 @@ h1 {
   color: gray;
 }
 
-/* ========================= */
-/* モーダルヘッダー */
-/* ========================= */
-
+/* ヘッダー */
 .modal-header {
+
   display: flex;
 
   align-items: center;
@@ -496,13 +586,15 @@ h1 {
 
 /* タイトル */
 #modal-title {
+
   margin: 0;
 }
 
-/* カテゴリアイコン */
+/* アイコン */
 #modal-category-icon {
 
   width: 60px;
+
   height: 60px;
 
   border-radius: 15px;
@@ -512,16 +604,19 @@ h1 {
   flex-shrink: 0;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
   overflow: hidden;
 }
 
-/* アイコン画像 */
+/* 画像 */
 #modal-category-icon img {
 
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
@@ -533,60 +628,46 @@ h1 {
 
 @media screen and (max-width: 768px) {
 
-  body {
-    padding: 0;
-  }
-
-  .container {
-    padding: 15px;
-  }
-
   /* ヘッダー */
   .site-header {
 
-    min-height: auto;
+    flex-wrap: wrap;
 
-    flex-direction: column;
+    height: auto;
 
-    align-items: flex-start;
-
-    padding: 15px;
-
-    gap: 15px;
+    padding: 15px 20px;
   }
 
-  /* 左側 */
-  .header-left {
+  /* ハンバーガー */
+  #menu-button {
+
+    display: block;
+  }
+
+  /* ナビ */
+  .header-nav {
+
+    display: none;
 
     width: 100%;
 
-    margin-bottom: 0;
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 15px;
+  }
+
+  /* 開いた */
+  .header-nav.open {
+
+    display: flex;
   }
 
   /* タイトル */
   .header-title {
 
     font-size: 22px;
-  }
-
-  /* メニュー */
-  .header-nav {
-
-    width: 100%;
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    justify-content: flex-start;
-  }
-
-  /* メニューリンク */
-  .header-nav a {
-
-    font-size: 14px;
   }
 
   /* ヒーロー */
@@ -599,11 +680,6 @@ h1 {
   .hero-title {
 
     font-size: 42px;
-  }
-
-  /* モーダル */
-  .modal-content {
-    padding: 20px;
   }
 
 }
