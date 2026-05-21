@@ -1,7 +1,13 @@
 /* ========================= */
 /* style.css */
 /* ========================= */
+/* 全体共通 */
+{
 
+  font-family:
+    "Zen Kaku Gothic New",
+    sans-serif;
+}
 /* 全体設定 */
 body {
 
