@@ -1,24 +1,18 @@
 /* ========================= */
 /* style.css */
 /* ========================= */
-/* 全体共通 */
-{
-  color: #333333;
-
-  font-family:
-    "Zen Kaku Gothic New",
-    sans-serif;
-
-  appearance: none;
-
-  -webkit-appearance: none;
-}
 /* 全体設定 */
 body {
 
   margin: 0;
 
   background-color: #f4f8f8;
+
+  color: #333333;
+
+  appearance: none;
+
+  -webkit-appearance: none;
 
   font-family:
     "Zen Kaku Gothic New",
