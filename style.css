@@ -26,7 +26,7 @@ body {
 
 .site-header {
 
-  height: 80px;
+  height: 50px;
 
   background-color: white;
 
@@ -73,7 +73,7 @@ body {
 /* タイトル */
 .header-title {
 
-  font-size: 18px;
+  font-size: 28px;
 }
 
 /* メニュー */
