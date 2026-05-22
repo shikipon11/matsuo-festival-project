@@ -635,6 +635,59 @@ h1 {
 
   margin: 5px 0 0;
 }
+/* ========================= */
+/* フッター */
+/* ========================= */
+
+.site-footer {
+
+  background-color: #efefef;
+
+  padding: 30px 5vwpx;
+
+  margin-top: 70px;
+
+  
+  font-family:
+  "Zen Old Mincho",
+  serif;
+}
+
+/* タイトル */
+.footer-title {
+
+  margin: 0 0 10px;
+
+  font-size: 30px;
+
+  font-weight: bold;
+
+  color: #111111;
+}
+
+/* 実行委員会など */
+.footer-text {
+
+  margin: 6px 0;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  color: #0b3b4a;
+}
+
+/* 注意文 */
+.footer-note {
+
+  margin: 10px 0 0;
+
+  font-size: 14px;
+
+  color: #222222;
+
+  line-height: 1.8;
+}
 
 /* ========================= */
 /* スマホ対応 */
@@ -717,57 +770,21 @@ h1 {
     font-size: 42px;
   }
 
-}
-/* ========================= */
-/* フッター */
-/* ========================= */
+  .site-footer {
 
-.site-footer {
+    padding: 25px 20px;
+  }
 
-  background-color: #efefef;
+  .footer-title {
 
-  padding: 30px 50px;
+    font-size: 18px;
+  }
 
-  margin-top: 70px;
+  .footer-text,
+  .footer-note {
 
+    font-size: 13px;
   
-  font-family:
-  "Zen Old Mincho",
-  serif;
+}
 }
 
-/* タイトル */
-.footer-title {
-
-  margin: 0 0 10px;
-
-  font-size: 30px;
-
-  font-weight: bold;
-
-  color: #111111;
-}
-
-/* 実行委員会など */
-.footer-text {
-
-  margin: 6px 0;
-
-  font-size: 15px;
-
-  font-weight: bold;
-
-  color: #0b3b4a;
-}
-
-/* 注意文 */
-.footer-note {
-
-  margin: 10px 0 0;
-
-  font-size: 14px;
-
-  color: #222222;
-
-  line-height: 1.8;
-}
