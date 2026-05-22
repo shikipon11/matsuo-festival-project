@@ -718,3 +718,51 @@ h1 {
   }
 
 }
+/* ========================= */
+/* フッター */
+/* ========================= */
+
+.site-footer {
+
+  background-color: #efefef;
+
+  padding: 30px 40px;
+
+  margin-top: 80px;
+}
+
+/* タイトル */
+.footer-title {
+
+  margin: 0 0 10px;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  color: #111111;
+}
+
+/* 実行委員会など */
+.footer-text {
+
+  margin: 6px 0;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  color: #0b3b4a;
+}
+
+/* 注意文 */
+.footer-note {
+
+  margin: 10px 0 0;
+
+  font-size: 14px;
+
+  color: #222222;
+
+  line-height: 1.8;
+}
