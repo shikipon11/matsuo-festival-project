@@ -118,7 +118,13 @@ body {
 
   font-size: 32px;
 
+  color: #333333;
+
   cursor: pointer;
+
+  appearance: none;
+
+  -webkit-appearance: none;
 }
 
 /* ========================= */
