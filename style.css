@@ -303,6 +303,16 @@ h1 {
   cursor: pointer;
 
   transition: 0.2s;
+  
+  color: #333333;
+
+  font-family:
+    "Zen Kaku Gothic New",
+    sans-serif;
+
+  appearance: none;
+
+  -webkit-appearance: none;
 }
 
 /* ホバー */
