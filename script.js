@@ -358,6 +358,42 @@ function createSection(title, data) {
 
   titleElement.textContent =
     title;
+  
+  titleElement.classList.add(
+  "section-title"
+  );
+
+  if (title === "飲食") {
+
+  titleElement.classList.add(
+    "food-text"
+  );
+
+}
+
+if (title === "展示") {
+
+  titleElement.classList.add(
+    "exhibition-text"
+  );
+
+}
+
+if (title === "体験") {
+
+  titleElement.classList.add(
+    "experience-text"
+  );
+
+}
+
+if (title === "パフォーマンス") {
+
+  titleElement.classList.add(
+    "performance-text"
+  );
+
+}
 
   /* アイコン */
   const icon =
