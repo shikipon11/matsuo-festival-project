@@ -468,14 +468,17 @@ if (title === "パフォーマンス") {
     /* 中身 */
     card.innerHTML = `
 
-      <div class="project-number">
-        企画 ${project.number}
+    <div class="project-top">
+
+      <div class="project-circle">
+        ${project.number}
       </div>
 
       <div class="project-title">
         仮企画 ${project.number}
       </div>
 
+</div>
       <div class="project-tags">
 
         <div class="tag ${categoryClass}">
