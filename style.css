@@ -429,12 +429,44 @@ h1 {
   background-color: #eeeeee;
 }
 
-/* 番号 */
-.project-number {
+.project-top {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 10px;
+}
+
+.project-circle {
+
+  min-width: 36px;
+
+  height: 36px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 999px;
+
+  background-color: #d75c37;
+
+  color: white;
 
   font-size: 14px;
 
-  color: gray;
+  font-weight: bold;
+
+  line-height: 1;
+
+  padding-top: 1px;
+
+  box-sizing: border-box;
 }
 
 /* タイトル */
@@ -516,7 +548,7 @@ h1 {
 /* 場所 */
 .place {
 
-  background-color: #237e82;
+  background-color: #555555;
 }
 
 /* ========================= */
