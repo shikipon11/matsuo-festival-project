@@ -558,8 +558,16 @@ if (title === "パフォーマンス") {
           `tag ${categoryClass}`;
 
         /* 場所 */
-        modalPlace.textContent =
-          `場所：${project.place} ${project.floor}`;
+        if (project.place === "その他") {
+
+            modalPlace.textContent = "";
+
+        } else {
+
+            modalPlace.textContent =
+                `場所：${project.place}`;
+
+        }
 
         /* 表示 */
         modal.classList.add(
