@@ -8,7 +8,7 @@
 
 const projects = [
   
-  { number: 1, title: "フォトスポット", category: "展示", place: "教室棟", floor: "4階" },
+  { number: 1, title: "フォトスポット", category: "展示", place: "教室棟", floor: "4階" image: ""},
   { number: 2, title: "お化け屋敷", category: "体験", place: "教室棟", floor: "4階" },
   { number: 3, title: "宝探し", category: "体験", place: "教室棟", floor: "4階" },
   { number: 4, title: "写真", category: "展示", place: "教室棟", floor: "4階" },
@@ -76,6 +76,10 @@ const modalNumber =
 const modalCategoryTag =
   document.getElementById(
     "modal-category-tag"
+  );
+const modalImage =
+  document.getElementById(
+    "modal-image"
   );
 
 // =========================
@@ -556,6 +560,9 @@ if (title === "パフォーマンス") {
         /* 色 */
         modalCategoryTag.className =
           `tag ${categoryClass}`;
+
+        modalImage.src =
+          project.image;
 
         /* 場所 */
         if (project.place === "その他") {
