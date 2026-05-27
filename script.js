@@ -20,29 +20,29 @@ const projects = [
   { number: 10, title: "美術", category: "展示", place: "教室棟" },
   { number: 11, title: "文芸", category: "展示", place: "教室棟" },
   { number: 12, title: "松尾祭地域応援", category: "飲食", place: "教室棟" },
-  { number: 13, title: "全校制作", category: "展示", place: "渡り廊下" },
+  { number: 13, title: "全校制作", category: "展示", place: "その他" },
   { number: 14, title: "カンボジア井戸プロ", category: "飲食", place: "管理棟" },
   { number: 15, title: "数学", category: "展示", place: "管理棟" },
   { number: 16, title: "被服", category: "展示", place: "管理棟" },
   { number: 17, title: "英語", category: "体験", place: "管理棟" },
   { number: 18, title: "図書", category: "展示", place: "管理棟" },
   { number: 19, title: "茶道", category: "体験", place: "管理棟" },
-  { number: 20, title: "ものづくり販売", category: "飲食", place: "昇降口" },
+  { number: 20, title: "ものづくり販売", category: "飲食", place: "その他" },
   { number: 21, title: "食品科学", category: "飲食", place: "管理棟" },
   { number: 22, title: "化学", category: "体験", place: "管理棟" },
   { number: 23, title: "天文気象", category: "展示", place: "管理棟" },
   { number: 24, title: "棋道", category: "体験", place: "管理棟" },
   { number: 25, title: "クイズ", category: "体験", place: "管理棟" },
-  { number: 26, title: "吹奏楽/書道/ダンス", category: "パフォーマンス", place: "第1体育館" },
-  { number: 27, title: "卓球", category: "体験", place: "第1体育館" },
-  { number: 28, title: "ちびっこ広場", category: "体験", place: "定時棟" },
-  { number: 29, title: "合唱/小さな音楽会", category: "パフォーマンス", place: "音楽室" },
-  { number: 30, title: "剣道", category: "体験", place: "格技室" },
-  { number: 31, title: "弓道", category: "体験", place: "ピロティ" },
-  { number: 32, title: "現代音楽/吹奏楽", category: "パフォーマンス", place: "中庭" },
-  { number: 33, title: "放送", category: "体験", place: "昇降口" },
-  { number: 34, title: "演劇", category: "パフォーマンス", place: "同窓会館" },
-  { number: 35, title: "室内楽/合唱", category: "パフォーマンス", place: "同窓会館" }
+  { number: 26, title: "吹奏楽/書道/ダンス", category: "パフォーマンス", place: "その他" },
+  { number: 27, title: "卓球", category: "体験", place: "その他" },
+  { number: 28, title: "ちびっこ広場", category: "体験", place: "その他" },
+  { number: 29, title: "合唱/小さな音楽会", category: "パフォーマンス", place: "その他" },
+  { number: 30, title: "剣道", category: "体験", place: "その他" },
+  { number: 31, title: "弓道", category: "体験", place: "その他" },
+  { number: 32, title: "現代音楽/吹奏楽", category: "パフォーマンス", place: "その他" },
+  { number: 33, title: "放送", category: "体験", place: "その他" },
+  { number: 34, title: "演劇", category: "パフォーマンス", place: "その他" },
+  { number: 35, title: "室内楽/合唱", category: "パフォーマンス", place: "その他" }
 
 ];
 
@@ -360,13 +360,6 @@ function renderPlaceView() {
     "管理棟",
     projects.filter(
       p => p.place === "管理棟"
-    )
-  );
-
-  createSection(
-    "定時棟",
-    projects.filter(
-      p => p.place === "定時棟"
     )
   );
 
