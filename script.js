@@ -621,7 +621,7 @@ function createSection(title, data) {
           );
 
           modalImages.innerHTML =
-            "<p>no image</p>";
+            "<p>NO IMAGE</p>";
 
         }
 
