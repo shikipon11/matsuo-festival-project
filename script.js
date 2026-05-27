@@ -34,7 +34,7 @@ const projects = [
   { number: 23, title: "天文気象", category: "展示", place: "管理棟", floor: "3階", image: ["images/天文班.png"] },
   { number: 24, title: "棋道", category: "体験", place: "管理棟", floor: "3階" },
   { number: 25, title: "クイズ", category: "体験", place: "管理棟", floor: "3階", image: ["images/総合文化部クイズ班_page-0001.jpg"] },
-  { number: 26, title: "吹奏楽/書道/ダンス", category: "パフォーマンス", place: "その他", floor: "第一体育館メイン", image: ["images/吹奏楽班コンサート.jpg", "images/書道班.jpg", "images/ダンス班_page-0001.jpg"] },
+  { number: 26, title: "吹奏楽/書道/ダンス", category: "パフォーマンス", place: "その他", floor: "第一体育館メイン", images: ["images/吹奏楽班コンサート.jpg", "images/書道班.jpg", "images/ダンス班_page-0001.jpg"] },
   { number: 27, title: "卓球", category: "体験", place: "その他", floor: "第一体育館ギャラリー" },
   { number: 28, title: "ちびっこ広場", category: "体験", place: "その他", floor: "定時棟 1階" },
   { number: 29, title: "合唱/小さな音楽会", category: "パフォーマンス", place: "その他", floor: "音楽室", images: ["images/混声合唱班_page-0001.jpg", "images/小さな音楽会.png"] },
