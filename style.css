@@ -647,21 +647,14 @@ h1 {
 
   height: 200px;
 
-  background-color: #dddddd;
+  object-fit: cover;
 
   border-radius: 15px;
 
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
   margin: 20px 0;
 
-  color: gray;
+  background-color: #dddddd;
 }
-
 /* ========================= */
 /* モーダル上部 */
 /* ========================= */
