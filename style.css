@@ -655,6 +655,31 @@ h1 {
 
   background-color: #dddddd;
 }
+.modal-images {
+
+  display: flex;
+
+  gap: 10px;
+
+  overflow-x: auto;
+
+  margin: 20px 0;
+}
+
+.modal-images img {
+
+  width: 220px;
+
+  height: 160px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  flex-shrink: 0;
+
+  background-color: #dddddd;
+}
 /* ========================= */
 /* モーダル上部 */
 /* ========================= */
