@@ -8,13 +8,13 @@
 // =========================
 
 const projects = [
-  
+
   { number: 1, title: "フォトスポット", category: "展示", place: "教室棟", floor: "4階" },
   { number: 2, title: "お化け屋敷", category: "体験", place: "教室棟", floor: "4階" },
   { number: 3, title: "宝探し", category: "体験", place: "教室棟", floor: "4階" },
-  { number: 4, title: "写真", category: "展示", place: "教室棟", floor: "4階" ,image: ["images/写真班.png"] },
-  { number: 5, title: "CAM", category: "展示", place: "教室棟", floor: "4階",image: ["images/CAM班.PNG"] },
-  { number: 6, title: "総合社会研究", category: "展示", place: "教室棟", floor: "3階" ,image: ["images/総合社会研究班.JPG"] },
+  { number: 4, title: "写真", category: "展示", place: "教室棟", floor: "4階", image: ["images/写真班.png"] },
+  { number: 5, title: "CAM", category: "展示", place: "教室棟", floor: "4階", image: ["images/CAM班.PNG"] },
+  { number: 6, title: "総合社会研究", category: "展示", place: "教室棟", floor: "3階", image: ["images/総合社会研究班.JPG"] },
   { number: 7, title: "書道", category: "展示", place: "教室棟", floor: "3階", image: ["images/書道班.jpg"] },
   { number: 8, title: "手相", category: "体験", place: "教室棟", floor: "3階", image: ["images/手相同好会.jpg"] },
   { number: 9, title: "競技かるた", category: "体験", place: "教室棟", floor: "2階" },
@@ -22,19 +22,19 @@ const projects = [
   { number: 11, title: "文芸", category: "展示", place: "教室棟", floor: "2階", image: ["images/文芸班.png"] },
   { number: 12, title: "松尾祭地域応援", category: "飲食", place: "教室棟", floor: "1階", image: ["images/松尾菜.png"] },
   { number: 13, title: "全校制作", category: "展示", place: "その他", floor: "渡り廊下" },
-  { number: 14, title: "カンボジア井戸プロ", category: "飲食", place: "管理棟", floor: "2階", image: ["images/カンボジア.png"]  },
-  { number: 15, title: "数学", category: "展示", place: "管理棟", floor: "2階", image: ["images/数学研究同好会.png"]  },
-  { number: 16, title: "被服", category: "展示", place: "管理棟", floor: "2階", image: ["images/被服班.png"]  },
+  { number: 14, title: "カンボジア井戸プロ", category: "飲食", place: "管理棟", floor: "2階", image: ["images/カンボジア.png"] },
+  { number: 15, title: "数学", category: "展示", place: "管理棟", floor: "2階", image: ["images/数学研究同好会.png"] },
+  { number: 16, title: "被服", category: "展示", place: "管理棟", floor: "2階", image: ["images/被服班.png"] },
   { number: 17, title: "英語", category: "体験", place: "管理棟", floor: "2階", image: ["images/英語班.jpeg"] },
-  { number: 18, title: "図書", category: "展示", place: "管理棟", floor: "2階", image: ["images/図書館.png"]  },
+  { number: 18, title: "図書", category: "展示", place: "管理棟", floor: "2階", image: ["images/図書館.png"] },
   { number: 19, title: "茶道", category: "体験", place: "管理棟", floor: "1階", image: ["images/茶道班.png"] },
   { number: 20, title: "ものづくり販売", category: "飲食", place: "その他", floor: "昇降口（中）" },
-  { number: 21, title: "食品科学", category: "飲食", place: "管理棟" , floor: "1階", image: ["images/食品科学班.JPG"] },
-  { number: 22, title: "化学", category: "体験", place: "管理棟", floor: "3階" , image: ["images/化学班.png"] },
-  { number: 23, title: "天文気象", category: "展示", place: "管理棟", floor: "3階", image: ["images/天文班.png"]  },
+  { number: 21, title: "食品科学", category: "飲食", place: "管理棟", floor: "1階", image: ["images/食品科学班.JPG"] },
+  { number: 22, title: "化学", category: "体験", place: "管理棟", floor: "3階", image: ["images/化学班.png"] },
+  { number: 23, title: "天文気象", category: "展示", place: "管理棟", floor: "3階", image: ["images/天文班.png"] },
   { number: 24, title: "棋道", category: "体験", place: "管理棟", floor: "3階" },
-  { number: 25, title: "クイズ", category: "体験", place: "管理棟", floor: "3階" , image: ["images/総合文化部クイズ班_page-0001.jpg"] },
-  { number: 26, title: "吹奏楽/書道/ダンス", category: "パフォーマンス", place: "その他", floor: "第一体育館メイン", image: ["images/吹奏楽班コンサート.jpg","images/書道班.jpg", "images/ダンス班_page-0001.jpg"] },
+  { number: 25, title: "クイズ", category: "体験", place: "管理棟", floor: "3階", image: ["images/総合文化部クイズ班_page-0001.jpg"] },
+  { number: 26, title: "吹奏楽/書道/ダンス", category: "パフォーマンス", place: "その他", floor: "第一体育館メイン", image: ["images/吹奏楽班コンサート.jpg", "images/書道班.jpg", "images/ダンス班_page-0001.jpg"] },
   { number: 27, title: "卓球", category: "体験", place: "その他", floor: "第一体育館ギャラリー" },
   { number: 28, title: "ちびっこ広場", category: "体験", place: "その他", floor: "定時棟 1階" },
   { number: 29, title: "合唱/小さな音楽会", category: "パフォーマンス", place: "その他", floor: "音楽室", images: ["images/混声合唱班_page-0001.jpg", "images/小さな音楽会.png"] },
@@ -274,8 +274,8 @@ function renderNumberView() {
     "1〜10",
     projects.filter(
       p =>
-        p.number >= 1 &&
-        p.number <= 10
+      p.number >= 1 &&
+      p.number <= 10
     )
   );
 
@@ -283,8 +283,8 @@ function renderNumberView() {
     "11〜20",
     projects.filter(
       p =>
-        p.number >= 11 &&
-        p.number <= 20
+      p.number >= 11 &&
+      p.number <= 20
     )
   );
 
@@ -292,8 +292,8 @@ function renderNumberView() {
     "21〜30",
     projects.filter(
       p =>
-        p.number >= 21 &&
-        p.number <= 30
+      p.number >= 21 &&
+      p.number <= 30
     )
   );
 
@@ -301,8 +301,8 @@ function renderNumberView() {
     "31〜35",
     projects.filter(
       p =>
-        p.number >= 31 &&
-        p.number <= 35
+      p.number >= 31 &&
+      p.number <= 35
     )
   );
 
@@ -402,42 +402,42 @@ function createSection(title, data) {
 
   titleElement.textContent =
     title;
-  
+
   titleElement.classList.add(
-  "section-title"
+    "section-title"
   );
 
   if (title === "飲食") {
 
-  titleElement.classList.add(
-    "food-text"
-  );
+    titleElement.classList.add(
+      "food-text"
+    );
 
-}
+  }
 
-if (title === "展示") {
+  if (title === "展示") {
 
-  titleElement.classList.add(
-    "exhibition-text"
-  );
+    titleElement.classList.add(
+      "exhibition-text"
+    );
 
-}
+  }
 
-if (title === "体験") {
+  if (title === "体験") {
 
-  titleElement.classList.add(
-    "experience-text"
-  );
+    titleElement.classList.add(
+      "experience-text"
+    );
 
-}
+  }
 
-if (title === "パフォーマンス") {
+  if (title === "パフォーマンス") {
 
-  titleElement.classList.add(
-    "performance-text"
-  );
+    titleElement.classList.add(
+      "performance-text"
+    );
 
-}
+  }
 
   /* アイコン */
   const icon =
@@ -560,16 +560,30 @@ if (title === "パフォーマンス") {
         /* 色 */
         modalCategoryTag.className =
           `tag ${categoryClass}`;
-
         modalImages.innerHTML = "";
 
-          /* images がある場合 */
-        if (project.images) {
+        /* imagesがある場合 */
+        if (project.images && project.images.length > 0) {
+
+          /* 1枚だけならクラス追加 */
+          if (project.images.length === 1) {
+
+            modalImages.classList.add(
+              "single-image"
+            );
+
+          } else {
+
+            modalImages.classList.remove(
+              "single-image"
+            );
+
+          }
 
           project.images.forEach(image => {
 
             const img =
-            document.createElement("img");
+              document.createElement("img");
 
             img.src = image;
 
@@ -581,37 +595,46 @@ if (title === "パフォーマンス") {
 
         }
 
-        /* image がある場合 */
+        /* imageが1枚だけある場合 */
         else if (project.image) {
 
+          modalImages.classList.add(
+            "single-image"
+          );
+
           const img =
-          document.createElement("img");
+            document.createElement("img");
 
-            img.src = project.image;
+          img.src = project.image;
 
-            img.alt = project.title;
+          img.alt = project.title;
 
-            modalImages.appendChild(img);
+          modalImages.appendChild(img);
 
-    }
+        }
 
-      /* 画像なし */
-    else {
+        /* 画像なし */
+        else {
 
-      modalImages.innerHTML =
-        "<p>画像なし</p>";
+          modalImages.classList.remove(
+            "single-image"
+          );
 
-    }
+          modalImages.innerHTML =
+            "<p>画像なし</p>";
+
+        }
+
         /* 場所 */
         if (project.place === "その他") {
 
-            modalPlace.textContent = 
-              `場所: ${project.floor}`;
+          modalPlace.textContent =
+            `場所: ${project.floor}`;
 
         } else {
 
-            modalPlace.textContent =
-                `場所：${project.place} ${project.floor}`;
+          modalPlace.textContent =
+            `場所：${project.place} ${project.floor}`;
 
         }
 
@@ -714,4 +737,3 @@ document.addEventListener(
 
   }
 );
-
