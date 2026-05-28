@@ -339,7 +339,7 @@ h1 {
 /* 選択中 */
 .tab-button.active {
 
-  background-color: #d75c37;
+  background-color: #cc4125;
 
   color: white;
 }
@@ -972,10 +972,24 @@ h1 {
 
 @keyframes fall {
 
-  to {
+  0% {
 
     transform:
-      translateY(110vh)
+      translate(0, 0)
+      rotate(0deg);
+
+    opacity: 1;
+  }
+
+  100% {
+
+    transform:
+      translate(
+        calc(
+          (var(--drift) - 0.5) * 400px
+        ),
+        110vh
+      )
       rotate(720deg);
 
     opacity: 0;
