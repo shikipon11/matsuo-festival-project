@@ -1101,6 +1101,10 @@ function createConfetti() {
     confetti.style.left =
       Math.random() * 100 + "vw";
 
+    confetti.style.setProperty(
+      "--drift",
+      Math.random()
+    );
     /* ランダム色 */
     const colors = [
       "#ff4d6d",
