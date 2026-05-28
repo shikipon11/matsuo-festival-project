@@ -1036,3 +1036,108 @@ document.addEventListener(
 
   }
 );
+// =========================
+// 隠し演出
+// =========================
+
+const heroTitle =
+  document.getElementById(
+    "hero-title"
+  );
+
+let secretCount = 0;
+
+/* タイトル押下 */
+heroTitle.addEventListener(
+  "click",
+  () => {
+
+    secretCount++;
+
+    /* 5回押した */
+    if (secretCount >= 5) {
+
+      /* アニメーション */
+      heroTitle.classList.add(
+        "secret-active"
+      );
+
+      /* 紙吹雪 */
+      createConfetti();
+
+      /* リセット */
+      secretCount = 0;
+
+      /* アニメ終了後 */
+      setTimeout(() => {
+
+        heroTitle.classList.remove(
+          "secret-active"
+        );
+
+      }, 1000);
+
+    }
+
+  }
+);
+
+// =========================
+// 紙吹雪生成
+// =========================
+
+function createConfetti() {
+
+  for (let i = 0; i < 40; i++) {
+
+    const confetti =
+      document.createElement("div");
+
+    confetti.className =
+      "confetti";
+
+    /* ランダム位置 */
+    confetti.style.left =
+      Math.random() * 100 + "vw";
+
+    /* ランダム色 */
+    const colors = [
+      "#ff4d6d",
+      "#ffd60a",
+      "#4cc9f0",
+      "#80ed99",
+      "#b388eb"
+    ];
+
+    confetti.style.backgroundColor =
+      colors[
+        Math.floor(
+          Math.random() *
+          colors.length
+        )
+      ];
+
+    /* ランダムサイズ */
+    const size =
+      Math.random() * 8 + 6;
+
+    confetti.style.width =
+      size + "px";
+
+    confetti.style.height =
+      size + "px";
+
+    document.body.appendChild(
+      confetti
+    );
+
+    /* 削除 */
+    setTimeout(() => {
+
+      confetti.remove();
+
+    }, 3000);
+
+  }
+
+}
