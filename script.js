@@ -1135,7 +1135,9 @@ function createConfetti() {
     document.body.appendChild(
       confetti
     );
-
+    /* 落下タイミングをずらす */
+    confetti.style.animationDelay =
+     Math.random() * 1.5 + "s";
     /* 削除 */
     setTimeout(() => {
 
