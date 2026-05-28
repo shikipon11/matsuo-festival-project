@@ -42,7 +42,7 @@ body {
   z-index: 100;
 
   box-shadow:
-    0 2px 10px rgba(0,0,0,0.1);
+    0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 左側 */
@@ -172,7 +172,7 @@ body {
   min-width: 220px;
 
   box-shadow:
-    0 4px 10px rgba(0,0,0,0.15);
+    0 4px 10px rgba(0, 0, 0, 0.15);
 
   z-index: 999;
 }
@@ -225,6 +225,7 @@ body {
 
   overflow: hidden;
 }
+
 /* オーバーレイ */
 .hero-overlay {
 
@@ -233,7 +234,7 @@ body {
   height: 100%;
 
   background-color:
-    rgba(0,0,0,0.35);
+    rgba(0, 0, 0, 0.35);
 
   display: flex;
 
@@ -252,11 +253,11 @@ body {
   margin: 0;
 
   text-shadow:
-    0 4px 10px rgba(0,0,0,0.5);
-  
+    0 4px 10px rgba(0, 0, 0, 0.5);
+
   font-family:
-  "Zen Old Mincho",
-  serif;
+    "Zen Old Mincho",
+    serif;
 }
 
 /* ========================= */
@@ -315,7 +316,7 @@ h1 {
   cursor: pointer;
 
   transition: 0.2s;
-  
+
   color: #333333;
 
   font-weight: bold;
@@ -500,6 +501,15 @@ h1 {
   font-size: 14px;
 }
 
+#modal-category-tag {
+
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
 /* 飲食 */
 .food {
 
@@ -523,11 +533,13 @@ h1 {
 
   background-color: #cd82ed;
 }
+
 /* 販売 */
-.sale{
+.sale {
 
   background-color: #df8020;
 }
+
 .food-text {
 
   color: #dfcc20;
@@ -547,10 +559,12 @@ h1 {
 
   color: #cd82ed;
 }
+
 .sale-text {
 
-  color:#df8020;
+  color: #df8020;
 }
+
 /* 場所 */
 .place {
 
@@ -577,7 +591,7 @@ h1 {
   height: 100%;
 
   background-color:
-    rgba(0,0,0,0.5);
+    rgba(0, 0, 0, 0.5);
 
   justify-content: center;
 
@@ -669,6 +683,7 @@ h1 {
   display: block;
 
 }
+
 /* ========================= */
 /* モーダル上部 */
 /* ========================= */
@@ -710,6 +725,7 @@ h1 {
 
   box-sizing: border-box;
 }
+
 /* タイトル */
 #modal-title {
 
@@ -717,6 +733,7 @@ h1 {
 
   margin: 5px 0 0;
 }
+
 /* ========================= */
 /* フッター */
 /* ========================= */
@@ -729,10 +746,10 @@ h1 {
 
   margin-top: 70px;
 
-  
+
   font-family:
-  "Zen Old Mincho",
-  serif;
+    "Zen Old Mincho",
+    serif;
 }
 
 /* タイトル */
@@ -821,7 +838,7 @@ h1 {
     box-sizing: border-box;
 
     box-shadow:
-      2px 0 10px rgba(0,0,0,0.15);
+      2px 0 10px rgba(0, 0, 0, 0.15);
 
     transition: 0.3s;
 
@@ -866,8 +883,6 @@ h1 {
   .footer-note {
 
     font-size: 13px;
-  
+
   }
 }
-
-
