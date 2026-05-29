@@ -428,6 +428,14 @@ h1 {
   transform: translateY(-2px);
 
   background-color: #eeeeee;
+
+  
+}
+
+.project-card:active {
+
+  transform: scale(0.97);
+
 }
 
 .project-top {
@@ -593,11 +601,15 @@ h1 {
   background-color:
     rgba(0, 0, 0, 0.5);
 
+  backdrop-filter: blur(4px);
+
   justify-content: center;
 
   align-items: center;
 
   z-index: 1000;
+
+
 }
 
 /* 表示 */
@@ -626,28 +638,44 @@ h1 {
   position: relative;
 
   animation:
-    popup 0.2s ease;
+    popup 0.45s
+    cubic-bezier(0.18, 1.2, 0.4, 1);
+
+  box-shadow:
+  0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 /* アニメーション */
 @keyframes popup {
 
-  from {
+  0% {
 
-    transform: scale(0.8);
+    transform:
+      translateY(40px)
+      scale(0.75);
 
     opacity: 0;
   }
 
-  to {
+  60% {
 
-    transform: scale(1);
+    transform:
+      translateY(-8px)
+      scale(1.03);
+
+    opacity: 1;
+  }
+
+  100% {
+
+    transform:
+      translateY(0)
+      scale(1);
 
     opacity: 1;
   }
 
 }
-
 /* 閉じる */
 .close-button {
 
