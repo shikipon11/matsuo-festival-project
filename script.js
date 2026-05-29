@@ -81,8 +81,19 @@ const projects = [
     number: 10,
     title: "美術",
     category: ["体験", "展示", "販売"],
-    place: "教室棟",
-    floor: "2階",
+    places: [{
+        building: "教室棟",
+        floor: "2階"
+      },
+      {
+        building: "管理棟",
+        floor: "1階"
+      },
+      {
+        building: "その他",
+        floor: "渡り廊下"
+      }
+    ]
     image: ["images/美術班.png"]
   },
   {
@@ -551,7 +562,7 @@ function renderCategoryView() {
 
   contentArea.innerHTML = "";
 
-  
+
   createSection(
     "販売",
     projects.filter(
@@ -599,27 +610,65 @@ function renderPlaceView() {
 
   createSection(
     "教室棟",
-    projects.filter(
-      p => p.place === "教室棟"
-    )
+    projects.filter(p => {
+
+      /* 複数場所対応 */
+      if (p.places) {
+
+        return p.places.some(
+          place =>
+          place.building === "教室棟"
+        );
+
+      }
+
+      /* 旧データ */
+      return p.place === "教室棟";
+
+    })
   );
 
   createSection(
     "管理棟",
-    projects.filter(
-      p => p.place === "管理棟"
-    )
+    projects.filter(p => {
+
+      /* 複数場所対応 */
+      if (p.places) {
+
+        return p.places.some(
+          place =>
+          place.building === "管理棟"
+        );
+
+      }
+
+      /* 旧データ */
+      return p.place === "管理棟";
+
+    })
   );
 
   createSection(
     "その他",
-    projects.filter(
-      p => p.place === "その他"
-    )
+    projects.filter(p => {
+
+      /* 複数場所対応 */
+      if (p.places) {
+
+        return p.places.some(
+          place =>
+          place.building === "その他"
+        );
+
+      }
+
+      /* 旧データ */
+      return p.place === "その他";
+
+    })
   );
 
 }
-
 // =========================
 // セクション生成
 // =========================
@@ -789,9 +838,25 @@ function createSection(title, data) {
 
        ${categoryTags}
 
-        <div class="tag place">
-          ${project.place}
-        </div>
+        ${
+  project.places
+
+    ? project.places.map(place => `
+
+      <div class="tag place">
+        ${place.building}
+      </div>
+
+    `).join("")
+
+    : `
+
+      <div class="tag place">
+        ${project.place}
+      </div>
+
+    `
+}
 
       </div>
 
@@ -926,15 +991,44 @@ function createSection(title, data) {
         }
 
         /* 場所 */
-        if (project.place === "その他") {
+        /* 場所 */
+        if (project.places) {
 
-          modalPlace.textContent =
-            `場所: ${project.floor}`;
+          modalPlace.innerHTML =
+            project.places.map(place => {
 
-        } else {
+              /* その他 */
+              if (place.building === "その他") {
 
-          modalPlace.textContent =
-            `場所：${project.place} ${project.floor}`;
+                return `
+          ${place.floor}
+        `;
+
+              }
+
+              return `
+        ${place.building}
+        ${place.floor}
+      `;
+
+            }).join("<br>");
+
+        }
+
+        /* 旧データ */
+        else {
+
+          if (project.place === "その他") {
+
+            modalPlace.textContent =
+              `場所：${project.floor}`;
+
+          } else {
+
+            modalPlace.textContent =
+              `場所：${project.place} ${project.floor}`;
+
+          }
 
         }
 
@@ -1137,7 +1231,7 @@ function createConfetti() {
     );
     /* 落下タイミングをずらす */
     confetti.style.animationDelay =
-     Math.random() * 1.5 + "s";
+      Math.random() * 1.5 + "s";
     /* 削除 */
     setTimeout(() => {
 
