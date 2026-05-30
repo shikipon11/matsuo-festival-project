@@ -875,7 +875,7 @@ h1 {
     z-index: 999;
   }
 
-  .header-nav a {
+  .header-nav a,.dropdown-button {
     width: 100%;
     text-align: left;
   }
