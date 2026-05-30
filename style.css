@@ -865,10 +865,17 @@ h1 {
     box-sizing: border-box;
   }
   .dropdown-button {
+    
+    align-items: flex-start;
+    
     width: 100%;
+    
     text-align: left;
+    
     display: block;
+    
     padding-left: 20px;
+    
     box-sizing: border-box;
   }
 
