@@ -841,37 +841,31 @@ h1 {
   }
 
   /* ナビ */
+
   .header-nav {
 
     position: fixed;
-
     top: 0;
-
     left: -260px;
 
     width: 240px;
-
     height: 100vh;
 
     background-color: white;
 
     display: flex;
-
     flex-direction: column;
+
+    align-items: flex-start; /* ←追加 */
 
     gap: 20px;
 
     padding: 100px 20px 20px;
 
     box-sizing: border-box;
-
-    box-shadow:
-      2px 0 10px rgba(0, 0, 0, 0.15);
-
-    transition: 0.3s;
-
-    z-index: 999;
   }
+
+
 
   /* 開いた */
   .header-nav.open {
