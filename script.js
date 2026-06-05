@@ -12,7 +12,7 @@ const projects = [
   {
     number: 1,
     title: "フォトスポット",
-    category: ["体験", "展示", "販売"],
+    category: ["体験", "展示"],
     place: "教室棟",
     floor: "4階"
   },
