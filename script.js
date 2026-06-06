@@ -764,7 +764,7 @@ function createSection(title, data) {
   // カード生成
   // =========================
 
-  data.forEach(project => {
+  data.forEach((project, index) => {
 
     /* カード */
     const card =
@@ -773,18 +773,13 @@ function createSection(title, data) {
     card.className =
       "project-card";
     
-   if (project.number === 1) {
-
-      card.classList.add(
-      "tutorial"
-      );
-   }
-  {
+  if (index === 0) {
 
     card.classList.add(
       "tutorial"
     );
 
+  }
   }
 
     /* 色 */
