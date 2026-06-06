@@ -773,12 +773,13 @@ function createSection(title, data) {
     card.className =
       "project-card";
     
-    if (
-    project.number === 1 &&
-    !localStorage.getItem(
-      "cardTutorialShown"
-    )
-  ) {
+   if (project.number === 1) {
+
+      card.classList.add(
+      "tutorial"
+      );
+   }
+  {
 
     card.classList.add(
       "tutorial"
@@ -882,11 +883,6 @@ function createSection(title, data) {
     card.addEventListener(
       "click",
       () => {
-
-        localStorage.setItem(
-          "cardTutorialShown",
-          "true"
-        );
 
         document
           .querySelectorAll(
