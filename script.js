@@ -780,7 +780,6 @@ function createSection(title, data) {
     );
 
   }
-  }
 
     /* 色 */
     /* カテゴリタグHTML */
