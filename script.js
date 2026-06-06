@@ -870,6 +870,23 @@ function createSection(title, data) {
       "click",
       () => {
 
+        localStorage.setItem(
+          "cardTutorialShown",
+          "true"
+        );
+
+        document
+          .querySelectorAll(
+            ".project-card.tutorial"
+          )
+          .forEach(card => {
+
+            card.classList.remove(
+              "tutorial"
+            );
+
+          });
+
         /* 番号 */
         modalNumber.textContent =
           project.number;
@@ -1044,6 +1061,26 @@ function createSection(title, data) {
     list.appendChild(card);
 
   });
+  if (
+    !localStorage.getItem(
+      "cardTutorialShown"
+    )
+  ) {
+
+    if (
+      project.number === 1 &&
+      !localStorage.getItem(
+        "cardTutorialShown"
+      )
+    ) {
+
+      card.classList.add(
+        "tutorial"
+      );
+
+    }
+
+  }
 
   // =========================
   // 開閉
