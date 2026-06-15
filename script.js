@@ -291,6 +291,32 @@ const projects = [
 // =========================
 // 要素取得
 // =========================
+const API_URL =
+"https://script.google.com/macros/library/d/1B4DAIpQJx-ySp6gaOa10g74UF8c6PvcUC-K48Hf46FAfacJdX6rijn6q/2";
+
+let congestionData = {};
+function getStatusLabel(status){
+
+  switch(status){
+
+    case "empty":
+      return "🟢 空いている";
+
+    case "normal":
+      return "🟡 やや混雑";
+
+    case "busy":
+      return "🔴 混雑";
+
+    case "limit":
+      return "⚫ 入場制限";
+
+    default:
+      return "⚪ 未設定";
+
+  }
+
+}
 
 const contentArea =
   document.getElementById("content-area");
@@ -453,8 +479,33 @@ document.addEventListener(
 // =========================
 // 初期表示
 // =========================
+async function loadCongestion(){
 
-renderNumberView();
+  try{
+
+    const response =
+      await fetch(API_URL);
+
+    congestionData =
+      await response.json();
+
+    renderNumberView();
+
+  }catch(error){
+
+    console.error(error);
+
+    renderNumberView();
+
+  }
+
+}
+
+loadCongestion();
+setInterval(
+  loadCongestion,
+  30000
+);
 
 // =========================
 // タブ切り替え
@@ -775,6 +826,8 @@ function createSection(title, data) {
     );
 
   }
+    const status =
+  congestionData[project.number] || "";
 
     /* 色 */
     /* カテゴリタグHTML */
@@ -837,6 +890,11 @@ function createSection(title, data) {
       </div>
 
 </div>
+
+<div class="project-congestion">
+  ${getStatusLabel(status)}
+</div>
+
       <div class="project-tags">
 
        ${categoryTags}
