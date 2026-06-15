@@ -2,6 +2,7 @@
 // script.js
 // =========================
 
+
 const projects = [
 
   {
