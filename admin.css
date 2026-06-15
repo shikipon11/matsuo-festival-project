@@ -75,3 +75,14 @@
   z-index:9999;
 
 }
+
+.buttons button.selected{
+
+  transform: scale(1.15);
+
+  box-shadow:
+    0 0 10px rgba(0,0,0,0.3);
+
+  border: 3px solid #333;
+
+}
