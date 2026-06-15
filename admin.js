@@ -330,7 +330,7 @@ projects.forEach(project => {
 
   </div>
   const API_URL =
-"https://script.google.com/macros/s/XXXXX/exec";
+"https://script.google.com/macros/s/AKfycbwau3GquTUWi1tCIFjwfy_gwvAlC2UE-AT6kfMXrzAO0J7SxqXH2i25Wnbk7oNUmyvR/exec";
 
 function updateStatus(number,status){
 
