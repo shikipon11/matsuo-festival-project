@@ -286,7 +286,7 @@ const projects = [
 
 
 const API_URL =
-"https://script.google.com/macros/s/AKfycbyuQX-3CMZI-BvLR5wpX-urdGWTSKtz0Bs2vFbyDpmImYl84hOf2jllx-H5wv6zoXEF/exec";
+"https://script.google.com/macros/library/d/1B4DAIpQJx-ySp6gaOa10g74UF8c6PvcUC-K48Hf46FAfacJdX6rijn6q/2";
 
 function updateStatus(number, status){
 
