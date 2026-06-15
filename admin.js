@@ -289,6 +289,40 @@ const API_URL =
 "https://script.google.com/macros/s/AKfycbxxqs7nc0gnhbGMkelwQKpM9R9CcOKEI5r75PpMz3S4XX1Ve6ONLD_FHet4-zUUbqsS/exec";
 let isUpdating = false;
 
+async function loadCurrentStatus(){
+
+  try{
+
+    const response =
+      await fetch(API_URL);
+
+    const data =
+      await response.json();
+
+    Object.entries(data)
+      .forEach(([number,status]) => {
+
+        const card =
+          document.querySelector(
+            `[data-number="${number}"]`
+          );
+
+        if(!card) return;
+
+        card
+          .querySelector(`.${status}`)
+          ?.classList.add("selected");
+
+      });
+
+  }catch(error){
+
+    console.error(error);
+
+  }
+
+}
+
 function updateStatus(number, status){
 
   if(isUpdating) return;
@@ -390,6 +424,8 @@ projects.forEach(project => {
   </div>
 
   `;
+  
+  loadCurrentStatus();
 
   list.appendChild(card);
 
