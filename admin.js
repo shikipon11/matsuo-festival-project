@@ -287,8 +287,15 @@ const projects = [
 
 const API_URL =
 "https://script.google.com/macros/s/AKfycbxxqs7nc0gnhbGMkelwQKpM9R9CcOKEI5r75PpMz3S4XX1Ve6ONLD_FHet4-zUUbqsS/exec";
+let isUpdating = false;
 
 function updateStatus(number, status){
+
+  if(isUpdating) return;
+
+  isUpdating = true;
+
+  document.body.classList.add("loading");
 
   fetch(API_URL,{
     method:"POST",
@@ -298,15 +305,43 @@ function updateStatus(number, status){
     })
   })
   .then(() => {
-    alert("更新しました");
+
+    const card =
+      document.querySelector(
+        `[data-number="${number}"]`
+      );
+
+    if(card){
+
+      card
+      .querySelectorAll("button")
+      .forEach(btn =>
+        btn.classList.remove("selected")
+      );
+
+      card
+      .querySelector(`.${status}`)
+      ?.classList.add("selected");
+
+    }
+
   })
   .catch(error => {
+
     console.error(error);
+
     alert("更新に失敗しました");
+
+  })
+  .finally(() => {
+
+    isUpdating = false;
+
+    document.body.classList.remove("loading");
+
   });
 
 }
-
 const list =
 document.getElementById("project-list");
 
@@ -316,6 +351,8 @@ projects.forEach(project => {
   document.createElement("div");
 
   card.className = "admin-card";
+  
+  card.dataset.number = project.number;
 
   card.innerHTML = `
   
