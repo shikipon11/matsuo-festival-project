@@ -285,6 +285,28 @@ const projects = [
 ];
 
 
+const API_URL =
+"https://script.google.com/macros/s/AKfycbwau3GquTUWi1tCIFjwfy_gwvAlC2UE-AT6kfMXrzAO0J7SxqXH2i25Wnbk7oNUmyvR/exec";
+
+function updateStatus(number, status){
+
+  fetch(API_URL,{
+    method:"POST",
+    body:JSON.stringify({
+      number,
+      status
+    })
+  })
+  .then(() => {
+    alert("更新しました");
+  })
+  .catch(error => {
+    console.error(error);
+    alert("更新に失敗しました");
+  });
+
+}
+
 const list =
 document.getElementById("project-list");
 
@@ -306,50 +328,29 @@ projects.forEach(project => {
 
     <button
       class="empty"
-      onclick="updateStatus(${project.number},'empty')">
+      onclick="updateStatus(${project.number}, 'empty')">
       🟢
     </button>
 
     <button
       class="normal"
-      onclick="updateStatus(${project.number},'normal')">
+      onclick="updateStatus(${project.number}, 'normal')">
       🟡
     </button>
 
     <button
       class="busy"
-      onclick="updateStatus(${project.number},'busy')">
+      onclick="updateStatus(${project.number}, 'busy')">
       🔴
     </button>
 
     <button
       class="limit"
-      onclick="updateStatus(${project.number},'limit')">
+      onclick="updateStatus(${project.number}, 'limit')">
       ⚫
     </button>
 
   </div>
-  `;
-  
-  const API_URL =
-"https://script.google.com/macros/s/AKfycbwau3GquTUWi1tCIFjwfy_gwvAlC2UE-AT6kfMXrzAO0J7SxqXH2i25Wnbk7oNUmyvR/exec";
-
-function updateStatus(number,status){
-
-  fetch(API_URL,{
-    method:"POST",
-    body:JSON.stringify({
-      number,
-      status
-    })
-  })
-  .then(() => {
-
-    alert("更新しました");
-
-  });
-
-}
 
   `;
 
