@@ -437,7 +437,31 @@ h1 {
   transform: scale(0.97);
 
 }
+.project-top {
 
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 10px;
+}
+
+.project-title {
+
+  flex: 1;
+}
+.project-congestion {
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+
+  text-align: right;
+}
 /* ========================= */
 /* 初回チュートリアル */
 /* ========================= */
