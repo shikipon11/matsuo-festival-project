@@ -889,12 +889,13 @@ function createSection(title, data) {
       <div class="project-title">
         ${project.title}
       </div>
+      
+      <div class="project-congestion">
+      ${getStatusLabel(status)}
+      </div>
 
 </div>
 
-<div class="project-congestion">
-  ${getStatusLabel(status)}
-</div>
 
       <div class="project-tags">
 
