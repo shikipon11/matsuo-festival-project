@@ -286,7 +286,7 @@ const projects = [
 
 
 const API_URL =
-"https://script.google.com/macros/s/AKfycbxxqs7nc0gnhbGMkelwQKpM9R9CcOKEI5r75PpMz3S4XX1Ve6ONLD_FHet4-zUUbqsS/exec";
+"https://script.google.com/macros/s/AKfycbziTPEatkxrpqHk9o1zBxAmnxqAwTp54XiEFLHWueSwBRwcfpfchMUPAnmmtTyptTqE/exec";
 let isUpdating = false;
 
 async function loadCurrentStatus(){
