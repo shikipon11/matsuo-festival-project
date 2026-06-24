@@ -280,6 +280,10 @@ const projects = [
     place: "その他",
     floor: "同窓会館　2階",
     images: ["images/室内楽班.png", "images/混声合唱班_page-0001.jpg"]
+  },
+  {
+    number: 36,
+    title:"飲食係"
   }
 
 ];
