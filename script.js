@@ -102,7 +102,7 @@ const projects = [
   },
   {
     number: 12,
-    title: "松尾祭地域応援",
+    title: "松尾菜地域応援",
     category: ["展示", "飲食"],
     place: "教室棟",
     floor: "1階",
