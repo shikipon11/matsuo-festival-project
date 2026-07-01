@@ -113,7 +113,8 @@ const projects = [
     title: "全校制作",
     category: ["展示"],
     place: "その他",
-    floor: "渡り廊下"
+    floor: "渡り廊下",
+    image: ["images/IMG_0653.JPG"]
   },
   {
     number: 14,
