@@ -717,7 +717,7 @@ function renderPlaceView() {
     "教室棟",
     projects.filter(p => {
 
-      /* 別にカテゴリと同じコードでいい*/
+      /* 別に配列にしてカテゴリと同じコードでいい*/
       if (p.places) {
 
         return p.places.some(
@@ -778,8 +778,8 @@ function renderPlaceView() {
 // セクション生成
 // =========================
 
-function createSection(title, data) {
-
+function createSection(title, data) { 
+  //htmlに追加
   /* section */
   const section =
     document.createElement("div");
@@ -804,7 +804,7 @@ function createSection(title, data) {
   titleElement.classList.add(
     "section-title"
   );
-
+  /* 条件に一致するものにクラスを追加 */
   if (title === "飲食") {
 
     titleElement.classList.add(
@@ -869,7 +869,7 @@ function createSection(title, data) {
   // カード生成
   // =========================
 
-  data.forEach((project, index) => {
+  data.forEach((project, index) => {    //配列を一個ずつ取り出す
 
     /* カード */
     const card =
@@ -878,7 +878,7 @@ function createSection(title, data) {
     card.className =
       "project-card";
 
-    if (index === 0) {
+    if (index === 0) {  //最初の１枚だけ特別なクラスを追加（ここをタップみたいなのを表示する予定）
 
       card.classList.add(
         "tutorial"
@@ -886,7 +886,7 @@ function createSection(title, data) {
 
     }
     const status =
-      congestionData[project.number] || "";
+      congestionData[project.number] || "";    //混雑状況を取得
 
     /* 色 */
     /* カテゴリタグHTML */
@@ -895,7 +895,7 @@ function createSection(title, data) {
     project.category.forEach(category => {
 
       let categoryClass = "";
-
+      //条件に一致するものにクラスを追加
       if (category === "飲食") {
 
         categoryClass = "food";
