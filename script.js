@@ -17,7 +17,8 @@ const projects = [
     title: "お化け屋敷",
     category: ["体験"],
     place: "教室棟",
-    floor: "4階"
+    floor: "4階",
+    image: ["images/有志企画_page-0001 (1).jpg"]
   },
   {
     number: 3,
@@ -71,7 +72,8 @@ const projects = [
     title: "競技かるた",
     category: ["体験"],
     place: "教室棟",
-    floor: "2階"
+    floor: "2階",
+    image: ["images/競技かるた班.jpg"]
   },
   {
     number: 10,
@@ -200,7 +202,8 @@ const projects = [
     title: "棋道",
     category: ["体験"],
     place: "管理棟",
-    floor: "3階"
+    floor: "3階",
+    image:["images/棋道班.jpg"]
   },
   {
     number: 25,
@@ -223,7 +226,8 @@ const projects = [
     title: "卓球",
     category: ["体験"],
     place: "その他",
-    floor: "第一体育館ギャラリー"
+    floor: "第一体育館ギャラリー",
+    image: ["images/卓球.jpg"]
   },
   {
     number: 28,
@@ -245,7 +249,8 @@ const projects = [
     title: "剣道",
     category: ["体験"],
     place: "その他",
-    floor: "格技室"
+    floor: "格技室",
+    image:["images/剣道.jpg"]
   },
   {
     number: 31,
