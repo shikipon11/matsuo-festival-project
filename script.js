@@ -2,7 +2,7 @@
 // script.js
 // =========================
 
-
+//企画一つ一つにに情報をもたせる
 const projects = [
 
   {
@@ -569,21 +569,21 @@ setInterval(
 // =========================
 // タブ切り替え
 // =========================
-
+//tabButtonの全てで同じ処理をする
 tabButtons.forEach(button => {
-
+  //もしクリックされたら
   button.addEventListener(
     "click",
     () => {
 
-      /* active削除 */
+      //activeをすべてのtabButtonから削除
       tabButtons.forEach(btn => {
 
         btn.classList.remove("active");
 
       });
 
-      /* active追加 */
+      //クリックしたやつだけactive追加
       button.classList.add("active");
 
       /* データ取得 */
@@ -620,17 +620,17 @@ tabButtons.forEach(button => {
 
 function renderNumberView() {
 
-  contentArea.innerHTML = "";
+  contentArea.innerHTML = "";    //一旦すべて消す
 
   createSection(
-    "1〜10",
-    projects.filter(
+    "1〜10",//1~10のセクションを作る
+    projects.filter(//条件に合うデータだけを取り出す（ここでの条件は1≦numbe(最初に決めたやつ)≦10）
       p =>
       p.number >= 1 &&
       p.number <= 10
     )
   );
-
+  //以降~35まで同じ
   createSection(
     "11〜20",
     projects.filter(
@@ -665,16 +665,16 @@ function renderNumberView() {
 
 function renderCategoryView() {
 
-  contentArea.innerHTML = "";
+  contentArea.innerHTML = "";    //一旦すべて消す
 
 
-  createSection(
-    "販売",
+  createSection(//条件に合うデータだけを取り出す
+    "販売",//ここではcategory（最初に決めたやつ）で販売のもの
     projects.filter(
       p => p.category.includes("販売")
     )
   );
-
+  //以降同じ
   createSection(
     "飲食",
     projects.filter(
@@ -711,13 +711,13 @@ function renderCategoryView() {
 
 function renderPlaceView() {
 
-  contentArea.innerHTML = "";
+  contentArea.innerHTML = "";    //一旦すべて消す
 
   createSection(
     "教室棟",
     projects.filter(p => {
 
-      /* 複数場所対応 */
+      /* 別にカテゴリと同じコードでいい*/
       if (p.places) {
 
         return p.places.some(
