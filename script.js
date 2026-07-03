@@ -379,22 +379,24 @@ const modalImages =
 // =========================
 // ハンバーガーメニュー
 // =========================
-
+//ボタンを取得
 const menuButton =
   document.getElementById("menu-button");
-
+//メニューを取得
 const headerNav =
   document.getElementById("header-nav");
 
 /* 開閉 */
+//addEventListener→もし〇〇されたら〜
 menuButton.addEventListener(
-  "click",
-  event => {
+  "click",//ここではクリックされたら〜
+  event => {    //クリックの情報（どこを押したか,マウスの座標等）
 
     /* 外側クリック防止 */
-    event.stopPropagation();
+    event.stopPropagation();  //クリックを親要素へ伝えない
 
     /* 開閉 */
+    //class="open"がなければ付与あれば消す
     headerNav.classList.toggle(
       "open"
     );
@@ -402,33 +404,33 @@ menuButton.addEventListener(
   }
 );
 
-// =========================
-// 外側クリックで閉じる
-// =========================
-
+/* 外側クリックで閉じる */
+//ページ全体が〇〇されたとき〜
 document.addEventListener(
-  "click",
-  event => {
+  "click",//ここではクリック
+  event => {  //クリックの情報（どこを押したか,マウスの座標等）  
 
     /* メニュー内 */
     const isNav =
-      headerNav.contains(
-        event.target
+      headerNav.contains(   //contains→含まれているか
+        event.target        //クリックされた要素
       );
-
+    //クリックされた要素ががheaderNavであるかを判定
     /* ボタン */
     const isButton =
       menuButton.contains(
         event.target
       );
+    //クリックされた要素ががmenuButtonであるかを判定
 
     /* 外側 */
+    //もしメニューやボタンではないところが押されたら＝ハンバーガーメニュー以外（いわゆる外側）を押されたとき
     if (
-      !isNav &&
-      !isButton
+      !isNav &&  
+      !isButton  
     ) {
 
-      headerNav.classList.remove(
+      headerNav.classList.remove(  //class="open"を削除する
         "open"
       );
 
@@ -438,6 +440,7 @@ document.addEventListener(
 );
 
 // =========================
+//スケジュール閉会(ハンバーガーメニューと大体同じ)
 // スケジュール開閉
 // =========================
 
@@ -467,9 +470,7 @@ scheduleToggle.addEventListener(
   }
 );
 
-// =========================
 // 外側クリックで閉じる
-// =========================
 
 document.addEventListener(
   "click",
@@ -505,49 +506,50 @@ document.addEventListener(
 // =========================
 // 初期表示
 // =========================
+//表示更新用の関数
 function refreshCurrentView() {
 
   const activeTab =
     document.querySelector(
-      ".tab-button.active"
+      ".tab-button.active"    //.tab-button.activeがついているタブ（ここでは最初は番号順、最後に開いたタブにactiveがつく）を取得
     ).dataset.tab;
-
+  //もし番号順なら
   if (activeTab === "number") {
-    renderNumberView();
+    renderNumberView();    //番号順表示関数
   }
-
+  //もしカテゴリ順なら
   if (activeTab === "category") {
-    renderCategoryView();
+    renderCategoryView();   //カテゴリ順表示関数
   }
-
+  //もし場所順なら
   if (activeTab === "place") {
-    renderPlaceView();
+    renderPlaceView();  //場所順表示関数
   }
 
 }
-async function loadCongestion(){
+async function loadCongestion(){    //async→時間のかかる処理
 
-  try{
+  try{    //エラーが起きる可能性のある処理
 
     const response =
-      await fetch(API_URL);
+      await fetch(API_URL);　//APIと通信できるまで待つ
 
     congestionData =
-      await response.json();
+      await response.json();//内容をjson形式にする
 
-    // 更新時刻
+    // 更新時刻を取得
     const now = new Date();
-
+    //htmlのlast-updateを書き換える
     document.getElementById(
       "last-update"
     ).textContent =
-      `最終更新：${now.getHours().toString().padStart(2,"0")}:${now.getMinutes().toString().padStart(2,"0")}`;
+      `最終更新：${now.getHours().toString().padStart(2,"0")}:${now.getMinutes().toString().padStart(2,"0")}`;//時間を表示させるときに一桁なら0◯にするようにしている
 
-    refreshCurrentView();
+    refreshCurrentView();//今の画面だけ更新
 
   }catch(error){
 
-    console.error(error);
+    console.error(error);//通信に失敗するとコンソールに表示(なくてもいい)
 
   }
 
@@ -559,9 +561,10 @@ renderNumberView();
 loadCongestion();
 
 // 15分ごと更新
+//setInterval=繰り返す
 setInterval(
   loadCongestion,
-  900000
+  900000//900000ミリ秒=15分
 );
 // =========================
 // タブ切り替え
