@@ -22,10 +22,12 @@ const projects = [
   },
   {
     number: 3,
-    title: "宝探し",
+    title: "謎解き",
     category: ["体験"],
     place: "教室棟",
-    floor: "4階"
+    floor: "4階",
+    image: ["images/有志企画_page-0001 (1).jpg"]
+  },
   },
   {
     number: 4,
