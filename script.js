@@ -29,7 +29,6 @@ const projects = [
     floor: "4階",
     image: ["images/有志企画_page-0001 (1).jpg"]
   },
-  },
   {
     number: 4,
     title: "写真",
