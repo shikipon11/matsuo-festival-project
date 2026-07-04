@@ -16,7 +16,7 @@ const projects = [
   },
   {
     number: 3,
-    title: "宝探し",
+    title: "謎解き",
     category: ["体験"],
     place: "教室棟",
     floor: "4階"
