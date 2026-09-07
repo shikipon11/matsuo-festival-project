@@ -2,565 +2,411 @@
 // script.js
 // =========================
 
-
-//企画一つ一つにに情報をもたせてる
+// 企画ごとの情報
 const projects = [
 
   {
     number: 1,
     title: "フォトスポット",
     category: ["体験", "展示"],
-    place: "教室棟",
-    floor: "4階"
+    places: [{ building: "教室棟", floor: "4階" }],
+    images: []
   },
   {
     number: 2,
     title: "お化け屋敷",
     category: ["体験"],
-    place: "教室棟",
-    floor: "4階",
-    image: ["images/有志企画_page-0001 (1).jpg"]
+    places: [{ building: "教室棟", floor: "4階" }],
+    images: ["images/有志企画_page-0001 (1).jpg"]
   },
   {
     number: 3,
     title: "謎解き",
     category: ["体験"],
-    place: "教室棟",
-    floor: "4階",
-    image: ["images/有志企画_page-0001 (1).jpg"]
+    places: [{ building: "教室棟", floor: "4階" }],
+    images: ["images/有志企画_page-0001 (1).jpg"]
   },
   {
     number: 4,
     title: "写真",
-    category: ["展示","販売"],
-    place: "教室棟",
-    floor: "4階",
-    image: ["images/写真班.png"]
+    category: ["展示", "販売"],
+    places: [{ building: "教室棟", floor: "4階" }],
+    images: ["images/写真班.png"]
   },
   {
     number: 5,
     title: "CAM",
     category: ["展示"],
-    place: "教室棟",
-    floor: "4階",
-    image: ["images/CAM班.PNG"]
+    places: [{ building: "教室棟", floor: "4階" }],
+    images: ["images/CAM班.PNG"]
   },
   {
     number: 6,
     title: "総合社会研究",
     category: ["体験", "展示"],
-    place: "教室棟",
-    floor: "3階",
-    image: ["images/総合社会研究班.JPG"]
+    places: [{ building: "教室棟", floor: "3階" }],
+    images: ["images/総合社会研究班.JPG"]
   },
   {
     number: 7,
     title: "書道",
     category: ["体験", "展示"],
-    place: "教室棟",
-    floor: "3階",
-    image: ["images/書道班.jpg"]
+    places: [{ building: "教室棟", floor: "3階" }],
+    images: ["images/書道班.jpg"]
   },
   {
     number: 8,
     title: "手相",
     category: ["体験"],
-    place: "教室棟",
-    floor: "3階",
-    image: ["images/手相同好会.jpg"]
+    places: [{ building: "教室棟", floor: "3階" }],
+    images: ["images/手相同好会.jpg"]
   },
   {
     number: 9,
     title: "競技かるた",
     category: ["体験"],
-    place: "教室棟",
-    floor: "2階",
-    image: ["images/競技かるた班.jpg"]
+    places: [{ building: "教室棟", floor: "2階" }],
+    images: ["images/競技かるた班.jpg"]
   },
   {
     number: 10,
     title: "美術",
     category: ["体験", "展示", "販売"],
-    places: [{
-        building: "教室棟",
-        floor: "2階"
-      },
-      {
-        building: "管理棟",
-        floor: "1階"
-      },
-      {
-        building: "その他",
-        floor: "渡り廊下"
-      }
+    places: [
+      { building: "教室棟", floor: "2階" },
+      { building: "管理棟", floor: "1階" },
+      { building: "その他", floor: "渡り廊下" }
     ],
-    image: ["images/美術班.png"]
+    images: ["images/美術班.png"]
   },
   {
     number: 11,
     title: "文芸",
     category: ["体験", "展示"],
-    place: "教室棟",
-    floor: "2階",
-    image: ["images/文芸班.png"]
+    places: [{ building: "教室棟", floor: "2階" }],
+    images: ["images/文芸班.png"]
   },
   {
     number: 12,
     title: "松尾菜地域応援",
     category: ["展示", "飲食"],
-    place: "教室棟",
-    floor: "1階",
-    image: ["images/松尾菜.png"]
+    places: [{ building: "教室棟", floor: "1階" }],
+    images: ["images/松尾菜.png"]
   },
   {
     number: 13,
     title: "全校制作",
     category: ["展示"],
-    place: "その他",
-    floor: "渡り廊下",
-    image: ["images/IMG_0653.JPG"]
+    places: [{ building: "その他", floor: "渡り廊下" }],
+    images: ["images/IMG_0653.JPG"]
   },
   {
     number: 14,
     title: "カンボジア井戸プロ",
     category: ["販売"],
-    place: "管理棟",
-    floor: "2階",
-    image: ["images/カンボジア.png"]
+    places: [{ building: "管理棟", floor: "2階" }],
+    images: ["images/カンボジア.png"]
   },
   {
     number: 15,
     title: "数学",
     category: ["体験"],
-    place: "管理棟",
-    floor: "2階",
-    image: ["images/数学研究同好会.png"]
+    places: [{ building: "管理棟", floor: "2階" }],
+    images: ["images/数学研究同好会.png"]
   },
   {
     number: 16,
     title: "被服",
     category: ["体験", "販売"],
-    place: "管理棟",
-    floor: "2階",
-    image: ["images/被服班.png"]
+    places: [{ building: "管理棟", floor: "2階" }],
+    images: ["images/被服班.png"]
   },
   {
     number: 17,
     title: "英語",
     category: ["体験", "飲食"],
-    place: "管理棟",
-    floor: "2階",
-    image: ["images/英語班.jpeg"]
+    places: [{ building: "管理棟", floor: "2階" }],
+    images: ["images/英語班.jpeg"]
   },
   {
     number: 18,
     title: "図書",
     category: ["体験", "飲食"],
-    place: "管理棟",
-    floor: "2階",
-    image: ["images/図書館.png"]
+    places: [{ building: "管理棟", floor: "2階" }],
+    images: ["images/図書館.png"]
   },
   {
     number: 19,
     title: "茶道",
     category: ["飲食", "パフォーマンス"],
-    place: "管理棟",
-    floor: "1階",
-    image: ["images/茶道班.png"]
+    places: [{ building: "管理棟", floor: "1階" }],
+    images: ["images/茶道班.png"]
   },
   {
     number: 20,
     title: "ものづくり販売",
     category: ["販売"],
-    place: "その他",
-    floor: "昇降口（中）"
+    places: [{ building: "その他", floor: "昇降口（中）" }],
+    images: []
   },
   {
     number: 21,
     title: "食品科学",
     category: ["飲食"],
-    place: "管理棟",
-    floor: "1階",
-    image: ["images/食品科学班.JPG"]
+    places: [{ building: "管理棟", floor: "1階" }],
+    images: ["images/食品科学班.JPG"]
   },
   {
     number: 22,
     title: "化学",
     category: ["体験", "パフォーマンス"],
-    place: "管理棟",
-    floor: "3階",
-    image: ["images/化学班.png"]
+    places: [{ building: "管理棟", floor: "3階" }],
+    images: ["images/化学班.png"]
   },
   {
     number: 23,
     title: "天文気象",
     category: ["展示"],
-    place: "管理棟",
-    floor: "3階",
-    image: ["images/天文班.png"]
+    places: [{ building: "管理棟", floor: "3階" }],
+    images: ["images/天文班.png"]
   },
   {
     number: 24,
     title: "棋道",
     category: ["体験"],
-    place: "管理棟",
-    floor: "3階",
-    image:["images/棋道班.jpg"]
+    places: [{ building: "管理棟", floor: "3階" }],
+    images:["images/棋道班.jpg"]
   },
   {
     number: 25,
     title: "クイズ",
     category: ["体験"],
-    place: "管理棟",
-    floor: "3階",
-    image: ["images/総合文化部クイズ班_page-0001.jpg"]
+    places: [{ building: "管理棟", floor: "3階" }],
+    images: ["images/総合文化部クイズ班_page-0001.jpg"]
   },
   {
     number: 26,
     title: "吹奏楽/書道/ダンス",
     category: ["パフォーマンス"],
-    place: "その他",
-    floor: "第一体育館メイン",
+    places: [{ building: "その他", floor: "第一体育館メイン" }],
     images: ["images/吹奏楽班コンサート.jpg", "images/書道班.jpg", "images/ダンス班_page-0001.jpg"]
   },
   {
     number: 27,
     title: "卓球",
     category: ["体験"],
-    place: "その他",
-    floor: "第一体育館ギャラリー",
-    image: ["images/卓球.jpg"]
+    places: [{ building: "その他", floor: "第一体育館ギャラリー" }],
+    images: ["images/卓球.jpg"]
   },
   {
     number: 28,
     title: "ちびっこ広場",
     category: ["体験"],
-    place: "その他",
-    floor: "定時棟 1階"
+    places: [{ building: "その他", floor: "定時棟 1階" }],
+    images: []
   },
   {
     number: 29,
     title: "合唱/小さな音楽会",
     category: ["パフォーマンス"],
-    place: "その他",
-    floor: "音楽室",
+    places: [{ building: "その他", floor: "音楽室" }],
     images: ["images/混声合唱班_page-0001.jpg", "images/小さな音楽会.png"]
   },
   {
     number: 30,
     title: "剣道",
     category: ["体験"],
-    place: "その他",
-    floor: "格技室",
-    image:["images/剣道.jpg"]
+    places: [{ building: "その他", floor: "格技室" }],
+    images:["images/剣道.jpg"]
   },
   {
     number: 31,
     title: "弓道",
     category: ["体験"],
-    place: "その他",
-    floor: "ピロティ",
-    image: ["images/弓道班.JPG"]
+    places: [{ building: "その他", floor: "ピロティ" }],
+    images: ["images/弓道班.JPG"]
   },
   {
     number: 32,
     title: "現代音楽/吹奏楽",
     category: ["パフォーマンス"],
-    place: "その他",
-    floor: "中庭（野外ステージ）",
+    places: [{ building: "その他", floor: "中庭（野外ステージ）" }],
     images: ["images/現代音楽_page-0001.jpg", "images/吹奏楽班ステージ.jpg"]
   },
   {
     number: 33,
     title: "放送",
     category: ["体験"],
-    place: "その他",
-    floor: "昇降口(外)",
-    image: ["images/放送班 - 1.png"]
+    places: [{ building: "その他", floor: "昇降口(外)" }],
+    images: ["images/放送班 - 1.png"]
   },
   {
     number: 34,
     title: "演劇",
     category: ["パフォーマンス"],
-    place: "その他",
-    floor: "同窓会館　1階",
-    image: ["images/演劇班.jpg"]
+    places: [{ building: "その他", floor: "同窓会館　1階" }],
+    images: ["images/演劇班.jpg"]
   },
   {
     number: 35,
     title: "室内楽/合唱",
     category: ["パフォーマンス"],
-    place: "その他",
-    floor: "同窓会館　2階",
+    places: [{ building: "その他", floor: "同窓会館　2階" }],
     images: ["images/室内楽班.png", "images/混声合唱班_page-0001.jpg"]
   }
 
 ];
 
 // =========================
-// 要素取得
+// 設定
 // =========================
+
 const API_URL =
   "https://script.google.com/macros/s/AKfycbztXzBSMkZiU0wbBNnO_efdR6kqW3emGrNo8H3vOvnkWBaO7QVjKU3pauSBXumYzThP/exec";
 
+const categoryClasses = {
+  "飲食": "food",
+  "展示": "exhibition",
+  "体験": "experience",
+  "パフォーマンス": "performance",
+  "販売": "sale"
+};
+
+const categoryTextClasses = {
+  "飲食": "food-text",
+  "展示": "exhibition-text",
+  "体験": "experience-text",
+  "パフォーマンス": "performance-text",
+  "販売": "sale-text"
+};
+
 let congestionData = {};
 
+// =========================
+// 混雑状況
+// =========================
+
 function getStatusLabel(status) {
-
   switch (status) {
-
     case "empty":
       return "🟢 空いてる";
-
     case "normal":
       return "🟡 やや混雑";
-
     case "busy":
       return "🔴 大変混雑";
-
     case "limit":
       return "⚫ 休止中";
-
     default:
       return "⚪ 読み込み中";
-
   }
-
 }
 
 function getStatusClass(status) {
-
   switch (status) {
-
     case "empty":
       return "status-empty";
-
     case "normal":
       return "status-normal";
-
     case "busy":
       return "status-busy";
-
     case "limit":
       return "status-limit";
-
     default:
       return "status-default";
-
   }
-
 }
 
-const contentArea =
-  document.getElementById("content-area");
+// =========================
+// 要素取得
+// =========================
 
-const tabButtons =
-  document.querySelectorAll(".tab-button");
-
-const modal =
-  document.getElementById("modal");
-
-const closeModal =
-  document.getElementById("close-modal");
-
-const modalTitle =
-  document.getElementById("modal-title");
-
-const modalPlace =
-  document.getElementById("modal-place");
-
-const modalNumber =
-  document.getElementById(
-    "modal-number"
-  );
-
-const modalCategoryTag =
-  document.getElementById(
-    "modal-category-tag"
-  );
-const modalImages =
-  document.getElementById(
-    "modal-images"
-  );
+const contentArea = document.getElementById("content-area");
+const tabButtons = document.querySelectorAll(".tab-button");
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("close-modal");
+const modalTitle = document.getElementById("modal-title");
+const modalPlace = document.getElementById("modal-place");
+const modalNumber = document.getElementById("modal-number");
+const modalCategoryTag = document.getElementById("modal-category-tag");
+const modalImages = document.getElementById("modal-images");
 
 // =========================
 // ハンバーガーメニュー
 // =========================
-//ボタンを取得
-const menuButton =
-  document.getElementById("menu-button");
-//メニューを取得
-const headerNav =
-  document.getElementById("header-nav");
 
-/* 開閉 */
-//addEventListener→もし〇〇されたら〜
-menuButton.addEventListener(
-  "click",//ここではクリックされたら〜
-  event => {    //クリックの情報（どこを押したか,マウスの座標等）
+const menuButton = document.getElementById("menu-button");
+const headerNav = document.getElementById("header-nav");
 
-    /* 外側クリック防止 */
-    event.stopPropagation();  //クリックを親要素へ伝えない
+menuButton.addEventListener("click", event => {
+  event.stopPropagation();
+  headerNav.classList.toggle("open");
+});
 
-    /* 開閉 */
-    //class="open"がなければ付与あれば消す
-    headerNav.classList.toggle(
-      "open"
-    );
+document.addEventListener("click", event => {
+  const isNav = headerNav.contains(event.target);
+  const isButton = menuButton.contains(event.target);
 
+  if (!isNav && !isButton) {
+    headerNav.classList.remove("open");
   }
-);
-
-/* 外側クリックで閉じる */
-//ページ全体が〇〇されたとき〜
-document.addEventListener(
-  "click",//ここではクリック
-  event => {  //クリックの情報（どこを押したか,マウスの座標等）  
-
-    /* メニュー内 */
-    const isNav =
-      headerNav.contains(   //contains→含まれているか
-        event.target        //クリックされた要素
-      );
-    //クリックされた要素ががheaderNavであるかを判定
-    /* ボタン */
-    const isButton =
-      menuButton.contains(
-        event.target
-      );
-    //クリックされた要素ががmenuButtonであるかを判定
-
-    /* 外側 */
-    //もしメニューやボタンではないところが押されたら＝ハンバーガーメニュー以外（いわゆる外側）を押されたとき
-    if (
-      !isNav &&  
-      !isButton  
-    ) {
-
-      headerNav.classList.remove(  //class="open"を削除する
-        "open"
-      );
-
-    }
-
-  }
-);
+});
 
 // =========================
-//スケジュール閉会(ハンバーガーメニューと大体同じ)
 // スケジュール開閉
 // =========================
 
-const scheduleToggle =
-  document.getElementById(
-    "schedule-toggle"
-  );
+const scheduleToggle = document.getElementById("schedule-toggle");
+const scheduleDropdown = document.getElementById("schedule-dropdown");
 
-const scheduleDropdown =
-  document.getElementById(
-    "schedule-dropdown"
-  );
+scheduleToggle.addEventListener("click", event => {
+  event.stopPropagation();
+  scheduleDropdown.classList.toggle("open");
+});
 
-/* 開閉 */
-scheduleToggle.addEventListener(
-  "click",
-  event => {
+document.addEventListener("click", event => {
+  const isDropdown = scheduleDropdown.contains(event.target);
+  const isButton = scheduleToggle.contains(event.target);
 
-    /* 外側クリック防止 */
-    event.stopPropagation();
-
-    /* 開閉 */
-    scheduleDropdown.classList.toggle(
-      "open"
-    );
-
+  if (!isDropdown && !isButton) {
+    scheduleDropdown.classList.remove("open");
   }
-);
-
-// 外側クリックで閉じる
-
-document.addEventListener(
-  "click",
-  event => {
-
-    /* ドロップダウン内 */
-    const isDropdown =
-      scheduleDropdown.contains(
-        event.target
-      );
-
-    /* ボタン */
-    const isButton =
-      scheduleToggle.contains(
-        event.target
-      );
-
-    /* 外側 */
-    if (
-      !isDropdown &&
-      !isButton
-    ) {
-
-      scheduleDropdown.classList.remove(
-        "open"
-      );
-
-    }
-
-  }
-);
+});
 
 // =========================
-// 初期表示
+// 表示更新
 // =========================
-//表示更新用の関数
+
 function refreshCurrentView() {
+  const activeTab = document.querySelector(".tab-button.active").dataset.tab;
 
-  const activeTab =
-    document.querySelector(
-      ".tab-button.active"    //.tab-button.activeがついているタブ（ここでは最初は番号順、最後に開いたタブにactiveがつく）を取得
-    ).dataset.tab;
-  //もし番号順なら
   if (activeTab === "number") {
-    renderNumberView();    //番号順表示関数
+    renderNumberView();
   }
-  //もしカテゴリ順なら
+
   if (activeTab === "category") {
-    renderCategoryView();   //カテゴリ順表示関数
+    renderCategoryView();
   }
-  //もし場所順なら
+
   if (activeTab === "place") {
-    renderPlaceView();  //場所順表示関数
+    renderPlaceView();
   }
-
 }
-async function loadCongestion(){    //async→時間のかかる処理
 
-  try{    //エラーが起きる可能性のある処理
+async function loadCongestion() {
+  try {
+    const response = await fetch(API_URL);
+    congestionData = await response.json();
 
-    const response =
-      await fetch(API_URL);　//APIと通信できるまで待つ
-
-    congestionData =
-      await response.json();//内容をjson形式にする
-
-    // 更新時刻を取得
     const now = new Date();
-    //htmlのlast-updateを書き換える
-    document.getElementById(
-      "last-update"
-    ).textContent =
-      `最終更新：${now.getHours().toString().padStart(2,"0")}:${now.getMinutes().toString().padStart(2,"0")}`;//時間を表示させるときに一桁なら0◯にするようにしている
+    document.getElementById("last-update").textContent =
+      `最終更新：${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`;
 
-    refreshCurrentView();//今の画面だけ更新
-
-  }catch(error){
-
-    console.error(error);//通信に失敗するとコンソールに表示(なくてもいい)
-
+    refreshCurrentView();
+  } catch (error) {
+    console.error(error);
   }
-
 }
+
 // 最初に画面表示
 renderNumberView();
 
@@ -568,57 +414,34 @@ renderNumberView();
 loadCongestion();
 
 // 15分ごと更新
-//setInterval=繰り返す
-setInterval(
-  loadCongestion,
-  900000//900000ミリ秒=15分
-);
+setInterval(loadCongestion, 900000);
+
 // =========================
 // タブ切り替え
 // =========================
-//tabButtonの全てで同じ処理をする
+
 tabButtons.forEach(button => {
-  //もしクリックされたら
-  button.addEventListener(
-    "click",
-    () => {
+  button.addEventListener("click", () => {
+    tabButtons.forEach(btn => {
+      btn.classList.remove("active");
+    });
 
-      //activeをすべてのtabButtonから削除
-      tabButtons.forEach(btn => {
+    button.classList.add("active");
 
-        btn.classList.remove("active");
+    const tab = button.dataset.tab;
 
-      });
-
-      //クリックしたやつだけactive追加
-      button.classList.add("active");
-
-      /* データ取得 */
-      const tab =
-        button.dataset.tab;
-
-      /* 表示切り替え */
-      if (tab === "number") {
-
-        renderNumberView();
-
-      }
-
-      if (tab === "category") {
-
-        renderCategoryView();
-
-      }
-
-      if (tab === "place") {
-
-        renderPlaceView();
-
-      }
-
+    if (tab === "number") {
+      renderNumberView();
     }
-  );
 
+    if (tab === "category") {
+      renderCategoryView();
+    }
+
+    if (tab === "place") {
+      renderPlaceView();
+    }
+  });
 });
 
 // =========================
@@ -626,90 +449,35 @@ tabButtons.forEach(button => {
 // =========================
 
 function renderNumberView() {
+  contentArea.innerHTML = "";
 
-  contentArea.innerHTML = "";    //一旦すべて消す
+  const maxNumber = Math.max(...projects.map(project => project.number));
 
-  createSection(
-    "1〜10",//1~10のセクションを作る
-    projects.filter(//条件に合うデータだけを取り出す（ここでの条件は1≦numbe(最初に決めたやつ)≦10）
-      p =>
-      p.number >= 1 &&
-      p.number <= 10
-    )
-  );
-  //以降~35まで同じ
-  createSection(
-    "11〜20",
-    projects.filter(
-      p =>
-      p.number >= 11 &&
-      p.number <= 20
-    )
-  );
+  for (let start = 1; start <= maxNumber; start += 10) {
+    const end = Math.min(start + 9, maxNumber);
 
-  createSection(
-    "21〜30",
-    projects.filter(
-      p =>
-      p.number >= 21 &&
-      p.number <= 30
-    )
-  );
-
-  createSection(
-    "31〜35",
-    projects.filter(
-      p =>
-      p.number >= 31 &&
-      p.number <= 35
-    )
-  );
-
+    createSection(
+      `${start}〜${end}`,
+      projects.filter(
+        project => project.number >= start && project.number <= end
+      )
+    );
+  }
 }
+
 // =========================
 // カテゴリ順
 // =========================
 
 function renderCategoryView() {
+  contentArea.innerHTML = "";
 
-  contentArea.innerHTML = "";    //一旦すべて消す
-
-
-  createSection(//条件に合うデータだけを取り出す
-    "販売",//ここではcategory（最初に決めたやつ）で販売のもの
-    projects.filter(
-      p => p.category.includes("販売")
-    )
-  );
-  //以降同じ
-  createSection(
-    "飲食",
-    projects.filter(
-      p => p.category.includes("飲食")
-    )
-  );
-
-  createSection(
-    "展示",
-    projects.filter(
-      p => p.category.includes("展示")
-    )
-  );
-
-  createSection(
-    "体験",
-    projects.filter(
-      p => p.category.includes("体験")
-    )
-  );
-
-  createSection(
-    "パフォーマンス",
-    projects.filter(
-      p => p.category.includes("パフォーマンス")
-    )
-  );
-
+  ["販売", "飲食", "展示", "体験", "パフォーマンス"].forEach(category => {
+    createSection(
+      category,
+      projects.filter(project => project.category.includes(category))
+    );
+  });
 }
 
 // =========================
@@ -717,640 +485,261 @@ function renderCategoryView() {
 // =========================
 
 function renderPlaceView() {
+  contentArea.innerHTML = "";
 
-  contentArea.innerHTML = "";    //一旦すべて消す
-
-  createSection(
-    "教室棟",
-    projects.filter(p => {
-
-      /* 別に配列にしてカテゴリと同じコードでいい*/
-      if (p.places) {
-
-        return p.places.some(
-          place =>
-          place.building === "教室棟"
-        );
-
-      }
-
-      /* 旧データ */
-      return p.place === "教室棟";
-
-    })
-  );
-
-  createSection(
-    "管理棟",
-    projects.filter(p => {
-
-      /* 複数場所対応 */
-      if (p.places) {
-
-        return p.places.some(
-          place =>
-          place.building === "管理棟"
-        );
-
-      }
-
-      /* 旧データ */
-      return p.place === "管理棟";
-
-    })
-  );
-
-  createSection(
-    "その他",
-    projects.filter(p => {
-
-      /* 複数場所対応 */
-      if (p.places) {
-
-        return p.places.some(
-          place =>
-          place.building === "その他"
-        );
-
-      }
-
-      /* 旧データ */
-      return p.place === "その他";
-
-    })
-  );
-
+  ["教室棟", "管理棟", "その他"].forEach(building => {
+    createSection(
+      building,
+      projects.filter(project =>
+        project.places.some(place => place.building === building)
+      )
+    );
+  });
 }
+
 // =========================
 // セクション生成
 // =========================
 
-function createSection(title, data) { 
-  //htmlに追加
-  /* section */
-  const section =
-    document.createElement("div");
+function createSection(title, data) {
+  const section = document.createElement("div");
+  section.className = "section";
 
-  section.className =
-    "section";
+  const header = document.createElement("div");
+  header.className = "section-header";
 
-  /* header */
-  const header =
-    document.createElement("div");
+  const titleElement = document.createElement("span");
+  titleElement.textContent = title;
+  titleElement.classList.add("section-title");
 
-  header.className =
-    "section-header";
-
-  /* タイトル */
-  const titleElement =
-    document.createElement("span");
-
-  titleElement.textContent =
-    title;
-
-  titleElement.classList.add(
-    "section-title"
-  );
-  /* 条件に一致するものにクラスを追加 */
-  if (title === "飲食") {
-
-    titleElement.classList.add(
-      "food-text"
-    );
-
+  const titleClass = categoryTextClasses[title];
+  if (titleClass) {
+    titleElement.classList.add(titleClass);
   }
 
-  if (title === "展示") {
-
-    titleElement.classList.add(
-      "exhibition-text"
-    );
-
-  }
-
-  if (title === "体験") {
-
-    titleElement.classList.add(
-      "experience-text"
-    );
-
-  }
-
-  if (title === "パフォーマンス") {
-
-    titleElement.classList.add(
-      "performance-text"
-    );
-
-  }
-
-  if (title === "販売") {
-
-    titleElement.classList.add(
-      "sale-text"
-    );
-
-  }
-
-  /* アイコン */
-  const icon =
-    document.createElement("span");
-
-  icon.className =
-    "toggle-icon";
-
+  const icon = document.createElement("span");
+  icon.className = "toggle-icon";
   icon.textContent = "∨";
-  /* header追加 */
-  header.appendChild(titleElement);
 
+  header.appendChild(titleElement);
   header.appendChild(icon);
 
-  /* 一覧 */
-  const list =
-    document.createElement("div");
-
-  list.className =
-    "project-list";
+  const list = document.createElement("div");
+  list.className = "project-list";
 
   // =========================
   // カード生成
   // =========================
 
-  data.forEach((project, index) => {    //配列を一個ずつ取り出す
+  data.forEach((project, index) => {
+    const card = document.createElement("div");
+    card.className = "project-card";
 
-    /* カード */
-    const card =
-      document.createElement("div");
-
-    card.className =
-      "project-card";
-
-    if (index === 0) {  //最初の１枚だけ特別なクラスを追加（ここをタップみたいなのを表示する予定）
-
-      card.classList.add(
-        "tutorial"
-      );
-
+    // 各セクションの最初の1枚にチュートリアル表示
+    if (index === 0) {
+      card.classList.add("tutorial");
     }
-    const status =
-      congestionData[project.number] || "";    //混雑状況を取得
 
-    /* 色 */
-    /* カテゴリタグHTML */
-    let categoryTags = "";
+    const status = congestionData[project.number] || "";
 
-    project.category.forEach(category => {
+    const categoryTags = project.category
+      .map(category => {
+        const categoryClass = categoryClasses[category] || "";
 
-      let categoryClass = "";
-      //条件に一致するものにクラスを追加
-      if (category === "飲食") {
+        return `
+          <div class="tag ${categoryClass}">
+            ${category}
+          </div>
+        `;
+      })
+      .join("");
 
-        categoryClass = "food";
+    const placeTags = project.places
+      .map(place => `
+        <div class="tag place">
+          ${place.building}
+        </div>
+      `)
+      .join("");
 
-      }
-
-      if (category === "展示") {
-
-        categoryClass = "exhibition";
-
-      }
-
-      if (category === "体験") {
-
-        categoryClass = "experience";
-
-      }
-
-      if (category === "パフォーマンス") {
-
-        categoryClass = "performance";
-
-      }
-
-      if (category === "販売") {
-
-        categoryClass = "sale";
-
-      }
-
-      categoryTags += `
-
-    <div class="tag ${categoryClass}">
-      ${category}
-    </div>
-
-  `;
-
-    });
-    /* 中身 */
     card.innerHTML = `
+      <div class="project-top">
+        <div class="project-circle">
+          ${project.number}
+        </div>
 
-    <div class="project-top">
+        <div class="project-title">
+          ${project.title}
+        </div>
 
-      <div class="project-circle">
-        ${project.number}
+        <div class="project-congestion ${getStatusClass(status)}">
+          ${getStatusLabel(status)}
+        </div>
       </div>
-
-      <div class="project-title">
-        ${project.title}
-      </div>
-      
-      <div class="project-congestion ${getStatusClass(status)}">
-  ${getStatusLabel(status)}
-</div>
-
-</div>
-
 
       <div class="project-tags">
-
-       ${categoryTags}
-
-        ${
-  project.places
-
-    ? project.places.map(place => `
-
-      <div class="tag place">
-        ${place.building}
+        ${categoryTags}
+        ${placeTags}
       </div>
-
-    `).join("")
-
-    : `
-
-      <div class="tag place">
-        ${project.place}
-      </div>
-
-    `
-}
-
-      </div>
-
     `;
 
     // =========================
     // モーダル
     // =========================
 
-    card.addEventListener(
-      "click",
-      () => {
-
-        document
-          .querySelectorAll(
-            ".project-card.tutorial"
-          )
-          .forEach(card => {
-
-            card.classList.remove(
-              "tutorial"
-            );
-
-          });
-
-        /* 番号 */
-        modalNumber.textContent =
-          project.number;
-
-        /* タイトル */
-        modalTitle.textContent =
-          project.title;
-
-        /* カテゴリタグ初期化 */
-        modalCategoryTag.innerHTML = "";
-
-        /* カテゴリごとにタグ生成 */
-        project.category.forEach(category => {
-
-          let categoryClass = "";
-
-          if (category === "飲食") {
-
-            categoryClass = "food";
-
-          }
-
-          if (category === "展示") {
-
-            categoryClass = "exhibition";
-
-          }
-
-          if (category === "体験") {
-
-            categoryClass = "experience";
-
-          }
-
-          if (category === "パフォーマンス") {
-
-            categoryClass = "performance";
-
-          }
-
-          if (category === "販売") {
-
-            categoryClass = "sale";
-
-          }
-
-          modalCategoryTag.innerHTML += `
-
-    <div class="tag ${categoryClass}">
-      ${category}
-    </div>
-
-  `;
-
+    card.addEventListener("click", () => {
+      document
+        .querySelectorAll(".project-card.tutorial")
+        .forEach(tutorialCard => {
+          tutorialCard.classList.remove("tutorial");
         });
-        modalImages.innerHTML = "";
 
-        /* imagesがある場合 */
-        if (project.images && project.images.length > 0) {
+      modalNumber.textContent = project.number;
+      modalTitle.textContent = project.title;
 
-          /* 1枚だけならクラス追加 */
-          if (project.images.length === 1) {
+      modalCategoryTag.innerHTML = "";
 
-            modalImages.classList.add(
-              "single-image"
-            );
+      project.category.forEach(category => {
+        const categoryClass = categoryClasses[category] || "";
 
-          } else {
-
-            modalImages.classList.remove(
-              "single-image"
-            );
-
-          }
-
-          project.images.forEach(image => {
-
-            const img =
-              document.createElement("img");
-
-            img.src = image;
-
-            img.alt = project.title;
-
-            modalImages.appendChild(img);
-
-          });
-
-        }
-
-        /* imageが1枚だけある場合 */
-        else if (project.image) {
-
-          modalImages.classList.add(
-            "single-image"
-          );
-
-          const img =
-            document.createElement("img");
-
-          img.src = project.image;
-
-          img.alt = project.title;
-
-          modalImages.appendChild(img);
-
-        }
-
-        /* 画像なし */
-        else {
-
-          modalImages.classList.remove(
-            "single-image"
-          );
-
-          modalImages.innerHTML =
-            "<p>NO IMAGE</p>";
-
-        }
-
-        /* 場所 */
-        /* 場所 */
-        if (project.places) {
-
-          modalPlace.innerHTML =
-            project.places.map(place => {
-
-              /* その他 */
-              if (place.building === "その他") {
-
-                return `
-          ${place.floor}
+        modalCategoryTag.innerHTML += `
+          <div class="tag ${categoryClass}">
+            ${category}
+          </div>
         `;
+      });
 
-              }
+      modalImages.innerHTML = "";
 
-              return `
-        ${place.building}
-        ${place.floor}
-      `;
-
-            }).join("<br>");
-
+      if (project.images.length > 0) {
+        if (project.images.length === 1) {
+          modalImages.classList.add("single-image");
+        } else {
+          modalImages.classList.remove("single-image");
         }
 
-        /* 旧データ */
-        else {
-
-          if (project.place === "その他") {
-
-            modalPlace.textContent =
-              `場所：${project.floor}`;
-
-          } else {
-
-            modalPlace.textContent =
-              `場所：${project.place} ${project.floor}`;
-
-          }
-
-        }
-        const commonImg = document.createElement("img");
-        commonImg.src = "images/map.jpg";   // 共通画像
-        commonImg.alt = "map";
-        commonImg.className = "common-image";
-        // すでに追加されていたら削除
-        document.querySelector(".common-image")?.remove();
-        // 場所の下に追加
-        modalPlace.insertAdjacentElement("afterend", commonImg);
-
-        /* 表示 */
-        modal.classList.add(
-          "show"
-        );
-
+        project.images.forEach(image => {
+          const img = document.createElement("img");
+          img.src = image;
+          img.alt = project.title;
+          modalImages.appendChild(img);
+        });
+      } else {
+        modalImages.classList.remove("single-image");
+        modalImages.innerHTML = "<p>NO IMAGE</p>";
       }
-    );
 
-    /* 一覧追加 */
+      // 1か所の企画は従来と同じ「場所：...」形式で表示
+      if (project.places.length === 1) {
+        const place = project.places[0];
+
+        if (place.building === "その他") {
+          modalPlace.textContent = `場所：${place.floor}`;
+        } else {
+          modalPlace.textContent = `場所：${place.building} ${place.floor}`;
+        }
+      } else {
+        // 複数場所の企画は従来と同じ複数行表示
+        modalPlace.innerHTML = project.places
+          .map(place => {
+            if (place.building === "その他") {
+              return `${place.floor}`;
+            }
+
+            return `${place.building} ${place.floor}`;
+          })
+          .join("<br>");
+      }
+
+      const commonImg = document.createElement("img");
+      commonImg.src = "images/map.jpg";
+      commonImg.alt = "map";
+      commonImg.className = "common-image";
+
+      document.querySelector(".common-image")?.remove();
+      modalPlace.insertAdjacentElement("afterend", commonImg);
+
+      modal.classList.add("show");
+    });
+
     list.appendChild(card);
-
   });
 
   // =========================
-  // 開閉
+  // セクション開閉
   // =========================
 
-  header.addEventListener(
-    "click",
-    () => {
+  header.addEventListener("click", () => {
+    list.classList.toggle("open");
 
-      list.classList.toggle(
-        "open"
-      );
-
-      if (
-        list.classList.contains(
-          "open"
-        )
-      ) {
-
-        icon.textContent = "∧";
-
-      } else {
-
-        icon.textContent = "∨";
-
-      }
-
+    if (list.classList.contains("open")) {
+      icon.textContent = "∧";
+    } else {
+      icon.textContent = "∨";
     }
-  );
+  });
 
-  /* section追加 */
   section.appendChild(header);
-
   section.appendChild(list);
-
-  /* 表示 */
   contentArea.appendChild(section);
-
 }
 
 // =========================
 // モーダルを閉じる
 // =========================
 
-/* ×ボタン */
-closeModal.addEventListener(
-  "click",
-  () => {
+closeModal.addEventListener("click", () => {
+  modal.classList.remove("show");
+  document.querySelector(".common-image")?.remove();
+});
 
-    modal.classList.remove(
-      "show"
-    );
+modal.addEventListener("click", event => {
+  if (event.target === modal) {
+    modal.classList.remove("show");
     document.querySelector(".common-image")?.remove();
-
   }
-);
+});
 
-/* 背景クリック */
-modal.addEventListener(
-  "click",
-  event => {
-
-    if (event.target === modal) {
-
-      modal.classList.remove(
-        "show"
-      );
-      document.querySelector(".common-image")?.remove();
-
-    }
-
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    modal.classList.remove("show");
+    document.querySelector(".common-image")?.remove();
   }
-);
+});
 
-/* ESCキー */
-document.addEventListener(
-  "keydown",
-  event => {
-
-    if (event.key === "Escape") {
-
-      modal.classList.remove(
-        "show"
-      );
-      document.querySelector(".common-image")?.remove();
-
-    }
-
-  }
-);
 // =========================
 // 隠し演出
 // =========================
 
-const heroTitle =
-  document.getElementById(
-    "hero-title"
-  );
-
+const heroTitle = document.getElementById("hero-title");
 let secretCount = 0;
 
-/* タイトル押下 */
-heroTitle.addEventListener(
-  "click",
-  () => {
+heroTitle.addEventListener("click", () => {
+  secretCount++;
 
-    secretCount++;
+  if (secretCount >= 5) {
+    heroTitle.classList.add("secret-active");
+    createConfetti();
+    secretCount = 0;
 
-    /* 5回押した */
-    if (secretCount >= 5) {
-
-      /* アニメーション */
-      heroTitle.classList.add(
-        "secret-active"
-      );
-
-      /* 紙吹雪 */
-      createConfetti();
-
-      /* リセット */
-      secretCount = 0;
-
-      /* アニメ終了後 */
-      setTimeout(() => {
-
-        heroTitle.classList.remove(
-          "secret-active"
-        );
-
-      }, 1000);
-
-    }
-
+    setTimeout(() => {
+      heroTitle.classList.remove("secret-active");
+    }, 1000);
   }
-);
+});
 
 // =========================
 // 紙吹雪生成
 // =========================
 
 function createConfetti() {
-
   for (let i = 0; i < 40; i++) {
+    const confetti = document.createElement("div");
+    confetti.className = "confetti";
 
-    const confetti =
-      document.createElement("div");
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.setProperty("--drift", Math.random());
 
-    confetti.className =
-      "confetti";
-
-    /* ランダム位置 */
-    confetti.style.left =
-      Math.random() * 100 + "vw";
-
-    confetti.style.setProperty(
-      "--drift",
-      Math.random()
-    );
-    /* ランダム色 */
     const colors = [
       "#ff4d6d",
       "#ffd60a",
@@ -1360,36 +749,18 @@ function createConfetti() {
     ];
 
     confetti.style.backgroundColor =
-      colors[
-        Math.floor(
-          Math.random() *
-          colors.length
-        )
-      ];
+      colors[Math.floor(Math.random() * colors.length)];
 
-    /* ランダムサイズ */
-    const size =
-      Math.random() * 8 + 6;
+    const size = Math.random() * 8 + 6;
+    confetti.style.width = size + "px";
+    confetti.style.height = size + "px";
 
-    confetti.style.width =
-      size + "px";
+    document.body.appendChild(confetti);
 
-    confetti.style.height =
-      size + "px";
+    confetti.style.animationDelay = Math.random() * 1.5 + "s";
 
-    document.body.appendChild(
-      confetti
-    );
-    /* 落下タイミングをずらす */
-    confetti.style.animationDelay =
-      Math.random() * 1.5 + "s";
-    /* 削除 */
     setTimeout(() => {
-
       confetti.remove();
-
     }, 3000);
-
   }
-
 }
