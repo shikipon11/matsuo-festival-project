@@ -439,28 +439,12 @@ h1 {
 
   background-color: #eeeeee;
 
-  
 }
 
 .project-card:active {
 
   transform: scale(0.97);
 
-}
-.project-top {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  margin-bottom: 10px;
-}
-
-.project-title {
-
-  flex: 1;
 }
 .project-congestion{
   padding:4px 8px;
@@ -487,6 +471,11 @@ h1 {
 .status-limit{
   color:#111827;
   background:#e5e7eb;
+}
+
+.status-default{
+  color:#555555;
+  background:#eeeeee;
 }
 /* ========================= */
 /* 初回チュートリアル */
@@ -581,6 +570,8 @@ h1 {
 
 /* タイトル */
 .project-title {
+
+  flex: 1;
 
   font-size: 20px;
 
@@ -713,7 +704,6 @@ h1 {
   align-items: center;
 
   z-index: 1000;
-
 
 }
 
@@ -885,7 +875,6 @@ h1 {
 
   margin-top: 70px;
 
-
   font-family:
     "Zen Old Mincho",
     serif;
@@ -957,7 +946,7 @@ h1 {
     position: fixed;
 
     align-items: flex-start;
-    
+
     top: 0;
 
     left: -260px;
@@ -991,14 +980,13 @@ h1 {
     text-align: left;
   }
 
-  
   .dropdown-button {
     display: block;
     width: 100%;
     text-align: left;
     padding: 0;
   }
-  
+
   /* 開いた */
   .header-nav.open {
 
